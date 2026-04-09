@@ -11,18 +11,12 @@
 | `貼官網用/行程特色_安全版_RULES.md` | 後台禁忌、基準標籤（tag）、還原指令 |
 | `專案最新備註.md` | 離開／回來時的現況與待辦 |
 
-## 遠端儲存庫（請自行建立後接上）
+## 遠端儲存庫
 
-若尚未建立 GitHub repo：
+- **GitHub**：https://github.com/sammyzomb/peru-55-anniversary  
+- 本機已設定 `origin`，主線為 `main`。
 
-1. 在 GitHub 新增空儲存庫（例如 `peru-55-tcawg`）。
-2. 在本專案根目錄：
-   ```bash
-   git remote add origin https://github.com/<你的帳號>/<repo>.git
-   git push -u origin main
-   ```
-
-換電腦：`git clone` 同一網址後，以 **`專案最新備註.md`** 與 **RULES 內的 Git 標籤** 對照版本。
+換電腦：`git clone https://github.com/sammyzomb/peru-55-anniversary.git`，再以 **`專案最新備註.md`** 與 **RULES 內的 Git 標籤** 對照版本。
 
 ## 可選：每小時提醒
 
