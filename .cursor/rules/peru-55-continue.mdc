@@ -1,0 +1,54 @@
+---
+description: 祕魯55周年：回來／離開流程、行程特色與最新備註
+alwaysApply: true
+---
+
+# 觸發語句與助理行為
+
+## 當使用者說「我回來了」或同義（例如：回來了、繼續）
+
+請依序簡短回覆，再問今天要處理什麼：
+
+1. **應該要做**：維護官網「行程特色」HTML；詳見 `貼官網用/行程特色_安全版_RULES.md`。上線**只貼** `貼官網用/行程特色_貼上版.html`；編輯優先 `行程特色_開發版.html` 再同步貼上版。
+2. **準備要做／接續**：請讀 **`專案最新備註.md`**（根目錄）的「待修正／待辦」「注意」；若檔案為空或過舊，依 git 與對話補一句目前主線。
+3. **固定現況提醒**：與夏古號為**同一官網後台**「行程特色」欄位；貼上版目標 **1 個 `<style>`**、**1 個 `<script>`**；根節點 **`#pe55-cms-safe-root`**，新 class／id 用前綴 **`pe55-`**。遠端 `origin/main`，換電腦先 `git pull`。
+
+---
+
+## 當使用者說「我要離開了」或同義（例如：先這樣、關機前同步）
+
+請**實際執行**（不要只口頭說明）：
+
+1. **同步到 GitHub**：在專案根目錄 `git status` → 若有未提交變更則 **`git add` 精準加入本次要提交的檔**（**避免** `git add -A` 把未追蹤大檔、exe 等推上遠端）→ `git commit -m "…"` → `git push origin main`。若 push 失敗，說明原因與建議下一步。
+2. **雲端**：若使用者 OneDrive／其他雲端同步此資料夾，提醒「GitHub 已 push 的內容換機可 pull」。
+3. **寫入最新備註**：更新根目錄 **`專案最新備註.md`**（已完成／要注意／待辦／最後更新日期）。
+
+若當次沒有任何新進度，仍應確認遠端狀態並可於備註註明「本次無新增提交」。
+
+---
+
+## 當使用者說「改回上一版正常」「還原正常版」「回到可貼版」或同義
+
+請**先確認**再執行還原：
+
+1. **一併提出**：是否要還原到 **`貼官網用/行程特色_安全版_RULES.md`** 第一節鎖定的**目前正常基線標籤**所指向之 `行程特色_貼上版.html`／`行程特色_開發版.html`？（若該專案尚未建立第一個標籤，應說明並改以 `git log`／指定 commit 處理。）
+2. 若使用者**不是**要這一版，**問清再** `git checkout`。
+3. 預設語意：**「上一版正常」＝RULES 表格中的目前基準標籤**。
+
+詳見 RULES 同一節「口頭／協作約定」。
+
+---
+
+## 一般開啟專案（未說上述觸發語）
+
+新對話可視情況用一兩句帶過：主線＋看 `專案最新備註.md`＋`行程特色_安全版_RULES.md`。
+
+---
+
+## 每小時提醒（可選）
+
+1. 專案內 `scripts/baseline-reminder.ps1`
+2. 註冊：`powershell -ExecutionPolicy Bypass -File .\scripts\Register-BaselineReminderTask.ps1`（工作名稱：`Peru55-BaselineHourlyReminder`）
+3. 解除：`powershell -ExecutionPolicy Bypass -File .\scripts\Unregister-BaselineReminderTask.ps1`
+
+若要鎖定基準版，依 `貼官網用/行程特色_安全版_RULES.md` 建立 Git 標籤（建議 `pe55-feature-baseline-YYYYMMDDhhmm`）並更新文件。
