@@ -1,148 +1,149 @@
---><div id="pe55-cms-safe-root"><style type="text/css">
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap");
-/* —— pe55 tokens：色票／字級／字族 —— */
-#pe55-cms-safe-root{position:relative;isolation:isolate;
-  --pe55-ink:#1c2b33;--pe55-night:#152a3d;--pe55-andes:#1a3a52;
-  --pe55-terra:#b85c2e;--pe55-terra-deep:#8f421f;
-  --pe55-gold:#c9a227;--pe55-gold-light:#e8c547;
-  --pe55-puna:#5a7a5e;--pe55-puna-soft:#dfe8df;
-  --pe55-sand:#f7f3ed;--pe55-cream:#fdfaf6;
-  --pe55-line:rgba(28,43,51,.12);--pe55-muted:#4a5c66;--pe55-subtle:#3d4f59;
-  --pe55-font-ui:"Noto Sans TC","Microsoft JhengHei","PingFang TC","Microsoft YaHei",sans-serif;
-  --pe55-font-latin:"Cormorant Garamond","Times New Roman",Times,serif;
-  --pe55-t-xl:clamp(2rem,5.5vw,3.35rem);--pe55-t-lg:clamp(1.45rem,3.6vw,2rem);
-  --pe55-t-md:clamp(1.15rem,2.75vw,1.42rem);--pe55-t-sm:clamp(1.02rem,2.2vw,1.14rem);
-  --pe55-t-body:clamp(.94rem,2vw,1.05rem);--pe55-t-caption:.72rem;
-}
+<div id="pe55-cms-safe-root"><style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Noto+Serif+TC:ital,wght@0,400;0,600;1,400&display=swap");
+#pe55-cms-safe-root{position:relative;isolation:isolate;width:100vw;max-width:none;margin-left:calc(50% - 50vw);box-sizing:border-box;overflow-x:clip}
 #pe55-root,#pe55-root *{box-sizing:border-box}
-#pe55-root{position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:0;color:var(--pe55-ink);font-family:var(--pe55-font-ui);font-size:var(--pe55-t-body);line-height:1.65;-webkit-font-smoothing:antialiased}
-#pe55-root img{max-width:100%;height:auto;display:block}
-#pe55-root a{color:var(--pe55-terra);text-decoration-thickness:1px;text-underline-offset:.2em}
-#pe55-root a:hover{color:var(--pe55-terra-deep)}
-/* —— 文字階層（工具 class，可與語意標籤併用） —— */
-.pe55-type-xl{font-size:var(--pe55-t-xl);line-height:1.2;font-weight:700;letter-spacing:.02em}
-.pe55-type-lg{font-size:var(--pe55-t-lg);line-height:1.28;font-weight:700}
-.pe55-type-md{font-size:var(--pe55-t-md);line-height:1.35;font-weight:700}
-.pe55-type-sm{font-size:var(--pe55-t-sm);line-height:1.4;font-weight:700}
-.pe55-type-body{font-size:var(--pe55-t-body);line-height:1.65;font-weight:400}
-.pe55-latin{font-family:var(--pe55-font-latin);font-weight:600;letter-spacing:.06em}
-/* —— 主視覺 —— */
-.pe55-hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--pe55-andes) 0%,#0f2433 45%,var(--pe55-night) 100%);color:#fff;text-align:center;padding:clamp(2.25rem,6vw,4rem) clamp(1.25rem,4vw,2rem) clamp(2rem,5vw,3.25rem)}
-.pe55-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(201,162,39,.2),transparent 60%);opacity:.92}
-.pe55-hero-inner{position:relative;z-index:1;max-width:42rem;margin:0 auto}
-.pe55-band-andes{display:block;height:3px;width:min(12rem,55vw);margin:0 auto .9rem;border-radius:999px;background:linear-gradient(90deg,transparent,var(--pe55-gold-light),var(--pe55-gold),transparent);opacity:.9}
-.pe55-motif-line{display:block;height:4px;width:min(10rem,70vw);margin:.85rem auto 0;border-radius:2px;background:repeating-linear-gradient(90deg,var(--pe55-gold) 0 6px,transparent 6px 14px,var(--pe55-terra) 14px 17px,transparent 17px 24px);opacity:.88}
-.pe55-kicker{display:inline-block;letter-spacing:.18em;font-size:var(--pe55-t-caption);font-weight:600;text-transform:uppercase;color:rgba(255,255,255,.78);margin-bottom:.55rem}
-.pe55-title{margin:0;font-size:var(--pe55-t-xl);font-weight:700;line-height:1.2;letter-spacing:.02em}
-.pe55-sub{margin:.85rem 0 0;font-size:var(--pe55-t-body);color:rgba(255,255,255,.9);line-height:1.62;font-weight:400;max-width:36rem;margin-left:auto;margin-right:auto}
-/* —— 內容區 —— */
-.pe55-wrap{max-width:min(56rem,100%);margin:0 auto;padding:clamp(1.75rem,4vw,2.75rem) clamp(1.25rem,4vw,2rem) clamp(2.25rem,5vw,3.5rem);background:var(--pe55-sand)}
-.pe55-section{margin:0 0 clamp(1.75rem,4vw,2.5rem)}
-.pe55-section:last-of-type{margin-bottom:0}
-.pe55-rule{height:1px;background:var(--pe55-line);margin:.5rem 0 1rem;border:0}
-.pe55-rule--gold{height:2px;margin:.35rem auto 1rem;max-width:8rem;background:linear-gradient(90deg,transparent,var(--pe55-gold),transparent);border:0;border-radius:2px}
-.pe55-h2{margin:0 0 .35rem;font-size:var(--pe55-t-lg);font-weight:700;color:#12242e}
-.pe55-lead{margin:0 0 1rem;font-size:var(--pe55-t-md);font-weight:500;color:var(--pe55-subtle);max-width:40rem;line-height:1.55}
-.pe55-hero-deck{margin:.45rem 0 0;font-size:clamp(1rem,2.6vw,1.22rem);font-weight:700;color:rgba(255,255,255,.94);line-height:1.35}
-.pe55-max-read{max-width:42rem;margin-left:auto;margin-right:auto}
-.pe55-story p{margin:0 0 1.05em;color:var(--pe55-muted);font-size:var(--pe55-t-body);line-height:1.75}
-.pe55-story p:last-child{margin-bottom:0}
-.pe55-story strong{color:#1a3340;font-weight:700}
-.pe55-grid{display:grid;gap:clamp(.85rem,2vw,1.1rem);grid-template-columns:1fr}
-@media(min-width:640px){.pe55-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:960px){.pe55-grid.pe55-grid-3{grid-template-columns:repeat(3,1fr)}}
-.pe55-card{position:relative;background:var(--pe55-cream);border:1px solid var(--pe55-line);border-radius:12px;padding:1.15rem 1.2rem 1.2rem;box-shadow:0 1px 0 rgba(255,255,255,.85) inset}
-.pe55-card--pattern{padding-left:1.35rem}
-.pe55-card--pattern::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:12px 0 0 12px;background:linear-gradient(180deg,var(--pe55-gold),var(--pe55-terra));opacity:.4}
-.pe55-card h3{margin:0 0 .4rem;font-size:var(--pe55-t-sm);font-weight:700;color:#1a3340}
-.pe55-card p{margin:0;font-size:var(--pe55-t-body);color:var(--pe55-muted);line-height:1.62}
-.pe55-badge{display:inline-block;font-size:var(--pe55-t-caption);font-weight:700;letter-spacing:.06em;color:var(--pe55-terra);background:rgba(184,92,46,.1);padding:.2rem .45rem;border-radius:999px;margin-bottom:.5rem}
-.pe55-list{margin:.35rem 0 0;padding:0 0 0 1.15rem;color:var(--pe55-subtle);font-size:var(--pe55-t-body)}
-.pe55-list li{margin:.35rem 0}
-.pe55-starlist{list-style:none;padding:0;margin:.35rem auto 0;max-width:42rem;color:var(--pe55-subtle);font-size:var(--pe55-t-body)}
-.pe55-starlist li{margin:.55rem 0;padding:0;display:flex;gap:.45rem;align-items:flex-start;line-height:1.55}
-.pe55-starlist .pe55-star{flex-shrink:0;color:var(--pe55-gold);font-weight:700;line-height:1.4}
-.pe55-note{font-size:var(--pe55-t-body);color:var(--pe55-muted);background:rgba(255,255,255,.72);border:1px dashed var(--pe55-line);border-radius:10px;padding:1rem 1.1rem}
-.pe55-cta{margin-top:clamp(1.25rem,3vw,1.75rem);text-align:center;padding:1.15rem 1rem;border-radius:12px;background:linear-gradient(180deg,rgba(26,58,82,.07),rgba(90,122,94,.05));border:1px solid var(--pe55-line)}
-.pe55-cta p{margin:0;font-size:var(--pe55-t-body);color:var(--pe55-muted)}
-/* —— 視覺精選：全寬軌＋高解析圖馬賽克 —— */
-.pe55-gallery-rail{width:100vw;margin-left:calc(50% - 50vw);background:var(--pe55-sand);padding:clamp(1.5rem,4vw,2.75rem) clamp(1rem,3vw,1.75rem) clamp(1.15rem,3vw,1.85rem)}
-.pe55-gallery-rail > .pe55-h2{max-width:min(72rem,100%);margin-left:auto;margin-right:auto}
-.pe55-mosaic{max-width:min(72rem,100%);margin:0 auto;display:grid;gap:clamp(.55rem,1.4vw,.75rem);grid-template-columns:1fr}
-@media(min-width:768px){
-  .pe55-mosaic{grid-template-columns:1.22fr .78fr;grid-template-rows:minmax(0,1fr) minmax(0,1fr);min-height:clamp(17rem,48vw,31rem)}
-  .pe55-mosaic-main{grid-column:1;grid-row:1 / span 2}
-  .pe55-mosaic-side-a{grid-column:2;grid-row:1}
-  .pe55-mosaic-side-b{grid-column:2;grid-row:2}
+#pe55-root{
+--g:#C9A227;--gd:#8B6914;--bg:#d4e0a8;--paper:#FFF9F3;--tx:#2C2824;--tx2:#5C564C;
+--r:clamp(8px,1vw,14px);--gap:clamp(12px,1.5vw,22px);--sh:0 12px 40px rgba(44,40,36,.12);--sh2:0 4px 20px rgba(44,40,36,.08);
+position:relative;width:100%;margin:0;padding:0;color:var(--tx);
+font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+background-color:var(--bg);
+background-image:linear-gradient(178deg,#e8eeb8 0%,#dce8b0 22%,#cdd99a 52%,#b8c878 88%,#a8b868 100%);
 }
-.pe55-ph{position:relative;margin:0;border-radius:14px;overflow:hidden;background:linear-gradient(145deg,#1a3042,#0f1f2c);box-shadow:0 14px 42px rgba(21,42,61,.22)}
-.pe55-ph::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:linear-gradient(180deg,transparent 42%,rgba(6,20,32,.58));opacity:.92}
-.pe55-ph img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.002);transition:transform 1.08s cubic-bezier(.22,1,.36,1)}
-@media(hover:hover) and (pointer:fine){
-  .pe55-ph:is(:hover,:focus-within) img{transform:scale(1.065)}
+#pe55-root .pe55-ff{font-family:"Noto Serif TC",Georgia,serif}
+#pe55-root .pe55-hero{position:relative;margin:0;width:100%;min-height:clamp(360px,78vh,900px);display:flex;align-items:flex-start;justify-content:flex-start;overflow:hidden}
+#pe55-root .pe55-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:clamp(56px,11vh,140px);z-index:2;pointer-events:none;background:linear-gradient(to bottom,rgba(232,238,184,0) 0%,rgba(232,238,184,0) 42%,rgba(220,232,168,.4) 68%,rgba(205,217,154,.82) 88%,#d4e0a8 100%)}
+#pe55-root .pe55-hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#1a1816}
+#pe55-root .pe55-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;display:block;transform:scale(0.9);transform-origin:50% 42%}
+#pe55-root.pe55-hero-revealed .pe55-hero-bg img{animation:pe55-hero-bg-zoom 5s cubic-bezier(.22,.61,.16,1) forwards}
+#pe55-root .pe55-hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:none}
+#pe55-root .pe55-hero-inner{position:relative;z-index:3;max-width:min(44rem,94vw);margin:clamp(1rem,3vw,2rem) 0 0 clamp(1rem,4vw,3.5rem);padding:clamp(.35rem,1vw,.65rem) clamp(.25rem,1vw,.5rem) 0 0;text-align:left;background:none;border:none;box-shadow:none}
+#pe55-root .pe55-hero-copy{min-width:0}
+#pe55-root .pe55-hero-logo-wrap{width:fit-content;max-width:100%;margin:0 0 clamp(.35rem,1.2vw,.55rem);padding:0;background:none;border:none;box-shadow:none;animation:none}
+#pe55-root .pe55-hero-logo{display:block;width:clamp(141px,46.4vw,256px);height:auto;opacity:0;animation:none;transform:scale(0.94);filter:drop-shadow(0 2px 12px rgba(0,0,0,.5)) drop-shadow(0 0 2px rgba(0,0,0,.35))}
+#pe55-root.pe55-hero-revealed .pe55-hero-logo{animation:pe55-hero-logo-in 1.15s cubic-bezier(.19,.92,.35,1) .52s forwards}
+#pe55-root.pe55-hero-revealed .pe55-hero-logo-wrap{animation:pe55-hero-logo-float 7.5s ease-in-out 1.85s infinite}
+@media (min-width:900px){
+#pe55-root .pe55-hero-logo{width:clamp(160px,20.8vw,240px)}
 }
-.pe55-ph:focus-within{outline:2px solid var(--pe55-gold);outline-offset:3px}
-.pe55-ph figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.55rem .8rem .68rem;font-size:var(--pe55-t-caption);font-weight:600;color:rgba(255,255,255,.94);text-shadow:0 1px 3px rgba(0,0,0,.5)}
-.pe55-gallery-note{margin:.65rem auto 0;max-width:min(72rem,100%);font-size:.82rem;color:var(--pe55-muted);line-height:1.55}
-/* —— 進場動畫：區塊／圖組／文字階梯 —— */
-@keyframes pe55-rise-soft{from{opacity:0;transform:translate3d(0,.75rem,0)}to{opacity:1;transform:none}}
-#pe55-root.pe55-js-motion .pe55-anim-onview{opacity:0;transform:translate3d(0,.85rem,0);transition:opacity .75s ease,transform .75s ease}
-#pe55-root.pe55-js-motion .pe55-anim-onview.pe55-anim-in{opacity:1;transform:translate3d(0,0,0)}
-#pe55-root.pe55-js-motion .pe55-anim-onview:not(.pe55-anim-in) .pe55-stagger > *{opacity:0;transform:translate3d(0,.55rem,0)}
-#pe55-root.pe55-js-motion .pe55-anim-onview.pe55-anim-in .pe55-stagger > *{animation:pe55-rise-soft .78s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--pe55-d,0s)}
-#pe55-root.pe55-js-motion .pe55-reveal:not(.pe55-anim-in) .pe55-hero-line{opacity:0;transform:translate3d(0,.75rem,0)}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line{animation:pe55-rise-soft .82s cubic-bezier(.22,1,.36,1) both}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(1){animation-delay:.06s}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(2){animation-delay:.14s}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(3){animation-delay:.22s}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(4){animation-delay:.3s}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(5){animation-delay:.38s}
-#pe55-root.pe55-js-motion .pe55-reveal.pe55-anim-in .pe55-hero-line:nth-child(6){animation-delay:.46s}
-#pe55-root.pe55-js-motion .pe55-mosaic-reveal:not(.pe55-anim-in) .pe55-mosaic .pe55-ph{opacity:0;transform:translate3d(0,1.05rem,0) scale(.988)}
-#pe55-root.pe55-js-motion .pe55-mosaic-reveal.pe55-anim-in .pe55-mosaic .pe55-ph{animation:pe55-rise-soft .92s cubic-bezier(.22,1,.36,1) both}
-#pe55-root.pe55-js-motion .pe55-mosaic-reveal.pe55-anim-in .pe55-mosaic .pe55-ph:nth-child(1){animation-delay:.07s}
-#pe55-root.pe55-js-motion .pe55-mosaic-reveal.pe55-anim-in .pe55-mosaic .pe55-ph:nth-child(2){animation-delay:.18s}
-#pe55-root.pe55-js-motion .pe55-mosaic-reveal.pe55-anim-in .pe55-mosaic .pe55-ph:nth-child(3){animation-delay:.29s}
-@media(prefers-reduced-motion:reduce){
-  #pe55-root *{animation:none!important}
-  .pe55-anim-onview{opacity:1!important;transform:none!important;transition:none!important}
-  .pe55-ph img{transition:none!important}
-  .pe55-ph:is(:hover,:focus-within) img{transform:none!important}
-  .pe55-anim-onview .pe55-stagger > *,.pe55-reveal .pe55-hero-line,.pe55-mosaic .pe55-ph{opacity:1!important;transform:none!important}
+#pe55-root .pe55-hero-kicker{margin:0 0 .5rem;font-family:"Caveat",cursive;font-size:clamp(1.76rem,3.38vw,2.41rem);font-weight:700;font-style:normal;letter-spacing:.04em;text-transform:none;color:rgba(245,238,228,.98);text-shadow:0 1px 2px rgba(0,0,0,.55),0 2px 10px rgba(0,0,0,.5),0 0 24px rgba(0,0,0,.38),0 0 40px rgba(201,162,39,.2);opacity:0;animation:none;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}
+#pe55-root .pe55-hero-title{margin:0 0 .65rem;font-size:clamp(2.64rem,8.2vw,4.59rem);font-weight:800;letter-spacing:.1em;line-height:1.25;color:#fff9f6;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.6),0 3px 14px rgba(0,0,0,.52),0 5px 28px rgba(0,0,0,.4),0 0 2px rgba(0,0,0,.35);opacity:0;animation:none;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}
+#pe55-root .pe55-hero-sub{margin:0;font-size:clamp(1.56rem,2.93vw,1.86rem);font-weight:700;letter-spacing:.08em;line-height:1.55;color:#f3e0a8;text-shadow:0 1px 2px rgba(0,0,0,.58),0 2px 10px rgba(0,0,0,.48),0 0 22px rgba(0,0,0,.38),0 0 36px rgba(243,224,168,.16);text-align:left}
+#pe55-root .pe55-hero-sub-flip{display:block;position:relative;min-height:1.55em;perspective:960px;opacity:0;animation:none}
+#pe55-root.pe55-hero-revealed .pe55-hero-sub-flip{animation:pe55-hero-sub-in 1.45s cubic-bezier(.19,.92,.35,1) 1.42s forwards}
+#pe55-root .pe55-hero-sub-flip-inner{display:block;position:relative;width:100%;min-height:1.55em;transform-style:preserve-3d;transform-origin:50% 50%;animation:none}
+#pe55-root.pe55-hero-revealed .pe55-hero-sub-flip-inner{animation:pe55-hero-sub-flip 5s infinite cubic-bezier(.52,.06,.48,.94);animation-delay:2.95s}
+#pe55-root .pe55-hero-sub-face{display:block;position:absolute;left:0;top:0;max-width:100%;white-space:nowrap;line-height:1.55;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform-style:preserve-3d}
+#pe55-root .pe55-hero-sub-face-a{transform:rotateX(0deg) translateZ(1px)}
+#pe55-root .pe55-hero-sub-face-b{transform:rotateX(180deg) translateZ(1px)}
+#pe55-root.pe55-hero-revealed .pe55-hero-kicker{animation:pe55-hero-in 1.45s cubic-bezier(.19,.92,.35,1) .08s forwards}
+#pe55-root.pe55-hero-revealed .pe55-hero-title{animation:pe55-hero-in 1.55s cubic-bezier(.19,.92,.35,1) .32s forwards}
+#pe55-root .pe55-yt-aspect{position:relative;width:100%;max-width:100%;border-radius:var(--r);overflow:hidden;border:1px solid rgba(44,40,36,.14);box-shadow:var(--sh2);background:#121418}
+#pe55-root .pe55-yt-aspect::before{content:"";display:block;padding-bottom:56.25%}
+#pe55-root .pe55-yt-aspect iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#pe55-root .pe55-shell{padding:clamp(1.25rem,2.5vw,2rem) 0 0;width:100%;box-sizing:border-box}
+#pe55-root .pe55-lead-band{width:100%;padding:0 clamp(1rem,2.8vw,2.25rem);box-sizing:border-box}
+#pe55-root .pe55-lead-wrap{max-width:min(56rem,100%);width:100%;margin:0 auto clamp(2rem,4vw,3rem);display:grid;gap:clamp(1.25rem,3vw,2rem);grid-template-columns:1fr}
+#pe55-root .pe55-lead-side{display:flex;flex-direction:column;gap:0;min-width:0}
+@media (min-width:820px){
+#pe55-root .pe55-lead-band{padding-left:0;padding-right:clamp(1rem,2.8vw,2.25rem)}
+#pe55-root .pe55-lead-wrap{max-width:none;width:100%;margin:0 0 clamp(2rem,4vw,3rem);grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;column-gap:clamp(1rem,2.5vw,1.75rem)}
+#pe55-root .pe55-lead-wrap > .pe55-pull{grid-column:1/-1}
+#pe55-root .pe55-lead-side{min-height:0;display:flex;flex-direction:column}
+#pe55-root .pe55-lead-side .pe55-yt-aspect{flex:1;min-height:0;border-radius:0 var(--r) var(--r) 0}
+#pe55-root .pe55-lead-side .pe55-yt-aspect::before{display:none}
 }
-</style><div id="pe55-root" lang="zh-Hant"><!-- [SCREEN-01 START] --><section class="pe55-hero pe55-reveal" aria-label="行程特色主視覺"><div class="pe55-hero-inner"><span class="pe55-band-andes pe55-hero-line" aria-hidden="true"></span><p class="pe55-kicker pe55-latin pe55-hero-line" lang="en">LIM15D · 15 DAYS · 55TH</p><h1 class="pe55-title pe55-hero-line">走進印加帝國的傳奇</h1><p class="pe55-hero-deck pe55-hero-line">祕魯馬丘比丘　亞馬遜雨林　彩虹山　15 日</p><span class="pe55-motif-line pe55-hero-line" aria-hidden="true"></span><p class="pe55-sub pe55-max-read pe55-hero-line">文案摘錄自航向世界官網本行程「行程特色」；實際出發日、航班、景點開放與費用以行程頁與行前說明為準。</p></div></section><!-- [SCREEN-01 END] --><!-- [SCREEN-02 START] --><section class="pe55-gallery-rail pe55-mosaic-reveal pe55-anim-onview" aria-labelledby="pe55-h-gallery"><h2 id="pe55-h-gallery" class="pe55-h2">視覺精選</h2><p class="pe55-gallery-note">以下為 <strong>Unsplash</strong> 高解析示意圖（<code style="font-size:.88em">q=88</code>、多寬度 <code style="font-size:.88em">srcset</code>）；正式上線請改為<strong>貴社圖床</strong>固定網址，並保留完整 <code style="font-size:.88em">alt</code> 與授權紀錄。</p><div class="pe55-mosaic"><figure class="pe55-ph pe55-mosaic-main"><img
-        src="https://images.unsplash.com/photo-1587595431973-160d0d238add?auto=format&amp;fit=crop&amp;w=1600&amp;q=88"
-        srcset="https://images.unsplash.com/photo-1587595431973-160d0d238add?auto=format&amp;fit=crop&amp;w=800&amp;q=88 800w, https://images.unsplash.com/photo-1587595431973-160d0d238add?auto=format&amp;fit=crop&amp;w=1200&amp;q=88 1200w, https://images.unsplash.com/photo-1587595431973-160d0d238add?auto=format&amp;fit=crop&amp;w=2000&amp;q=88 2000w"
-        sizes="(max-width:767px) 100vw, (max-width:1100px) 100vw, 62vw"
-        width="2000" height="1333"
-        alt="祕魯馬丘比丘印加古城遺跡，雲霧中的安地斯山景"
-        decoding="async" fetchpriority="high" loading="eager" /><figcaption>馬丘比丘 · 天空之城</figcaption></figure><figure class="pe55-ph pe55-mosaic-side-a"><img
-        src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&amp;fit=crop&amp;w=1200&amp;q=88"
-        srcset="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&amp;fit=crop&amp;w=600&amp;q=88 600w, https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&amp;fit=crop&amp;w=900&amp;q=88 900w, https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&amp;fit=crop&amp;w=1400&amp;q=88 1400w"
-        sizes="(max-width:767px) 100vw, 38vw"
-        width="1400" height="933"
-        alt="祕魯亞馬遜流域，河面與熱帶雨林植被"
-        decoding="async" loading="lazy" /><figcaption>亞馬遜雨林 · 河流與叢林</figcaption></figure><figure class="pe55-ph pe55-mosaic-side-b"><img
-        src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=1200&amp;q=88"
-        srcset="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=600&amp;q=88 600w, https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=900&amp;q=88 900w, https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&amp;fit=crop&amp;w=1400&amp;q=88 1400w"
-        sizes="(max-width:767px) 100vw, 38vw"
-        width="1400" height="933"
-        alt="安地斯山區色彩層次分明的山稜與高原景觀（示意）"
-        decoding="async" loading="lazy" /><figcaption>高原山稜 · 色彩層次（示意）</figcaption></figure></div></section><!-- [SCREEN-02 END] --><!-- [SCREEN-03 START] --><div class="pe55-wrap"><section class="pe55-section pe55-anim-onview" aria-labelledby="pe55-h-story"><div class="pe55-stagger"><h2 id="pe55-h-story" class="pe55-h2">行程特色</h2><hr class="pe55-rule--gold" /><div class="pe55-story pe55-max-read"><p>說真的，祕魯這趟旅程走完後，才知道什麼叫做「世界真的很大」。一開始在<strong>利馬老城區</strong>散步，看著殖民時期的建築與廣場，旅程就慢慢有了感覺。沿著<strong>泛美公路</strong>到<strong>帕拉卡斯</strong>，再搭船看<strong>布蘭卡島</strong>滿滿的海鳥與海獅，海風一吹，整個人都醒了。後來從空中俯瞰<strong>納斯卡線</strong>，那些巨大圖案真的讓人忍不住一直猜：古人到底怎麼做到的？</p><p>接著飛到<strong>馬爾多納多港</strong>，走進<strong>亞馬遜熱帶雨林</strong>，夜晚的叢林聲音多到像交響樂。再到印加古都<strong>庫斯科</strong>，穿越<strong>聖谷</strong>到<strong>熱水鎮</strong>，當我第一次站在<strong>馬丘比丘</strong>面前，那種「終於來到這裡了」的感覺真的很難形容。還有色彩像畫布一樣的<strong>彩虹山</strong>，以及高原上的<strong>的的喀喀湖</strong>，登上<strong>蘆葦浮島</strong>與<strong>塔吉利島</strong>，才發現原來文化與自然可以如此純粹。</p><p>最後回到<strong>利馬米拉弗洛雷斯區</strong>欣賞城市景觀與海岸風情，大家都說同一句話：這趟祕魯，不只是旅行，而是一段會一直想拿出來說給朋友聽的故事。</p></div></div></section><!-- [SCREEN-03 END] --><!-- [SCREEN-04 START] --><section class="pe55-section pe55-anim-onview" aria-labelledby="pe55-h-captions"><div class="pe55-stagger"><h2 id="pe55-h-captions" class="pe55-h2">影像與體驗看點（摘錄）</h2><hr class="pe55-rule" /><p class="pe55-lead">以下為官網圖說與看點之整理版，措辭已略去重複字元並統一地名；若與行程頁圖檔說明有細微差異，以官網為準。</p><ul class="pe55-list pe55-max-read"><li>馬丘比丘古文明遺址，壯麗山景。</li><li>豐富行程設計，體驗多彩與創意魅力。</li><li>旅行體驗多樣，美食豐富多彩。</li><li>亞馬遜雨林俯瞰景觀與生態（如猴群等）；探索古印加帝國文明奧秘。</li><li>旅遊景點：利馬、納斯卡線、庫斯科、馬丘比丘。</li><li>馬丘比丘古城遺址，安地斯山脈祕魯境內。</li><li>聖谷梯田與鹽田的壯麗景觀。</li><li>布蘭卡島（鳥島）野生動物保護區與神秘燭台。</li><li>納斯卡線、亞馬遜雨林探險（如釣食人魚等體驗，依現場與季節安排）。</li><li>的的喀喀湖高原湖光與原民文化。</li><li>彩虹山以多彩條紋聞名。</li><li>熱水鎮旅館，距馬丘比丘最近的舒適住宿之一；庫斯科市區旅館溫馨舒適。</li><li>祕魯風味餐廳，庭院雅緻且氛圍溫馨。</li></ul></div></section><!-- [SCREEN-04 END] --><!-- [SCREEN-05 START] --><section class="pe55-section pe55-anim-onview" aria-labelledby="pe55-h-special"><div class="pe55-stagger"><h2 id="pe55-h-special" class="pe55-h2">特別安排</h2><hr class="pe55-rule--gold" /><ul class="pe55-starlist"><li><span class="pe55-star" aria-hidden="true">★</span><span>帕拉卡斯海灣乘坐遊艇前往布蘭卡島</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>納斯卡線 Nazca Lines 飛行之旅</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>入住雨林旅館，開放式觀景台享受原始雨林</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>航行亞馬遜河，欣賞湖泊沼澤區</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>搭乘號稱南美洲最有名的馬丘比丘觀光火車</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>搭乘當地摩托車，輕鬆抵達彩虹山</span></li><li><span class="pe55-star" aria-hidden="true">★</span><span>搭船前往烏羅族 Uros 居住的蘆葦浮島＋塔吉利島</span></li></ul></div></section><!-- [SCREEN-05 END] --><!-- [SCREEN-06 START] --><section class="pe55-section pe55-anim-onview" aria-labelledby="pe55-h-note"><div class="pe55-stagger"><h2 id="pe55-h-note" class="pe55-h2">溫馨提醒</h2><div class="pe55-note" role="note"><p class="pe55-type-body" style="margin:0 0 .5rem">· 以上摘錄自官網「行程特色／特別安排」區塊，僅供版面測試與貼文對照；<strong>出發日期、航班、飯店、活動可否成行（如納斯卡小飛機、彩虹山、雨林活動）</strong>仍以行程頁、每日行程與行前說明會資料為準。</p><p class="pe55-type-body" style="margin:0">· 海拔與氣候、簽證／護照、旅平險、行李限制與退費規定等，請詳閱行程頁之旅遊須知與業務回覆。</p></div><div class="pe55-cta"><p class="pe55-type-body">團型 <strong>LIM15D</strong> 完整內容與報名：<a href="https://www.tcawg.com/travel/tours/LIM15D-%E7%A7%98%E9%AD%AF-%E5%8D%B0%E5%8A%A0%E5%B8%9D%E5%9C%8B-%E9%A6%AC%E4%B8%98%E6%AF%94%E4%B8%98-%E4%BA%9E%E9%A6%AC%E9%81%9C%E9%9B%A8%E6%9E%97-%E5%BD%A9%E8%99%B9%E5%B1%B1-15%E6%97%A5-55%E5%91%A8%E5%B9%B4%E6%85%B6%E7%89%B9%E6%83%A0%E5%9C%98.html" rel="noopener noreferrer">前往航向世界行程頁</a>。</p></div></div></section></div><!-- [SCREEN-06 END] --><script>
+@media (max-width:819px){
+#pe55-root .pe55-lead-band{padding:0 clamp(1rem,2.8vw,2.25rem)}
+#pe55-root .pe55-lead-wrap{max-width:min(56rem,100%);margin-left:auto;margin-right:auto}
+#pe55-root .pe55-lead-side .pe55-yt-aspect{flex:none;min-height:0;border-radius:var(--r)}
+#pe55-root .pe55-lead-side .pe55-yt-aspect::before{display:block}
+}
+#pe55-root .pe55-pull{margin:0;padding:clamp(1rem,2vw,1.35rem) 0 0;font-size:clamp(1.05rem,2.1vw,1.35rem);font-weight:500;font-style:italic;line-height:1.55;color:var(--gd);border-top:3px solid var(--g);letter-spacing:.04em}
+#pe55-root .pe55-pull::before{content:"\201C";font-size:1.4em;line-height:0;margin-right:.15em;opacity:.5}
+#pe55-root .pe55-lead-body p{margin:0 0 1.05rem;font-size:clamp(.9rem,1.15vw,1.04rem);line-height:1.9;color:var(--tx2);text-align:justify;text-justify:inter-ideograph}
+#pe55-root .pe55-lead-body p:last-child{margin-bottom:0}
+#pe55-root .pe55-lead-body>p:first-of-type::first-letter{float:left;font-size:clamp(2.6rem,6vw,3.6rem);line-height:.85;padding:.06em .14em 0 0;font-weight:600;color:var(--gd)}
+#pe55-root .pe55-lead-body strong{font-weight:600;color:var(--tx)}
+#pe55-root .pe55-grp{position:relative;margin:0;width:100%;padding:clamp(2.25rem,5vw,4rem) 0;box-sizing:border-box}
+#pe55-root .pe55-grp-a{background:linear-gradient(165deg,#cdd9eb 0%,#dce6f4 38%,rgba(228,213,200,.92) 100%);border-top:1px solid rgba(27,42,74,.12)}
+#pe55-root .pe55-grp-b{background:linear-gradient(165deg,#f0c9a8 0%,#ffe8d8 42%,rgba(219,196,178,.93) 100%);border-top:1px solid rgba(139,69,19,.14);padding-bottom:clamp(2.75rem,5.5vw,4.25rem)}
+#pe55-root .pe55-ch{position:relative;z-index:1;max-width:none;width:100%;margin:0 0 clamp(1.35rem,2.8vw,2rem);padding:0;display:grid;grid-template-columns:auto 1fr;gap:.75rem 1.25rem;align-items:end}
+#pe55-root .pe55-ch-num{grid-row:1/3;font-size:clamp(3.2rem,12vw,5.5rem);font-weight:300;line-height:.82;color:rgba(201,162,39,.35);letter-spacing:-.02em}
+#pe55-root .pe55-ch-meta{padding-bottom:.15rem;border-bottom:2px solid rgba(44,40,36,.12)}
+#pe55-root .pe55-ch-en{margin:0 0 .2rem;font-size:clamp(1.5rem,4.2vw,2.75rem);font-weight:600;font-style:italic;letter-spacing:.04em;line-height:1.1;color:#1a3a5c}
+#pe55-root .pe55-grp-b .pe55-ch-en{color:#6b3418}
+#pe55-root .pe55-ch-zh{margin:0;font-size:.82rem;font-weight:700;letter-spacing:.2em;color:var(--tx2)}
+#pe55-root .pe55-bento{max-width:none;width:100%;margin:0;display:grid;gap:0;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);grid-template-rows:minmax(0,1fr) minmax(0,1fr) auto}
+#pe55-root .pe55-bento-m .pe55-fig-h{grid-column:2}
+#pe55-root .pe55-bento-m .pe55-bento-s{grid-column:1}
+#pe55-root .pe55-bento-s{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:0}
+#pe55-root .pe55-fig{position:relative;margin:0;padding:0;overflow:hidden;border-radius:0;border:0;box-shadow:none;background:#e0dcd3}
+#pe55-root .pe55-fig-h{grid-column:1;grid-row:1/3;min-height:clamp(280px,48vh,520px);box-shadow:none;background:#ddd8cf}
+#pe55-root .pe55-fig-t{min-height:clamp(160px,22vw,240px)}
+#pe55-root .pe55-fig-s{min-height:clamp(140px,20vw,220px);background:#e8e4dc;border-color:rgba(44,40,36,.09)}
+#pe55-root .pe55-film-wrap{grid-column:1/-1;grid-row:3;display:flex;flex-direction:column;gap:0;margin-top:0}
+#pe55-root .pe55-film{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+#pe55-root .pe55-wall{margin:clamp(1rem,2.5vw,1.75rem) 0 clamp(2rem,4vw,3.25rem);width:100%;padding:0;box-sizing:border-box}
+#pe55-root .pe55-wall-title{margin:0 0 clamp(1rem,2vw,1.35rem);max-width:none;width:100%;padding:0;font-size:clamp(.85rem,1.2vw,.95rem);font-weight:800;letter-spacing:.28em;color:var(--tx2);text-align:center}
+#pe55-root .pe55-mosaic{max-width:none;width:100%;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0}
+#pe55-root .pe55-fig-g{aspect-ratio:1/1;min-height:clamp(112px,20vw,198px);background:#dcd6cc}
+@media (max-width:1100px){#pe55-root .pe55-mosaic{grid-template-columns:repeat(3,1fr)}}
+#pe55-root .pe55-txt{background:var(--paper);border-radius:var(--r);padding:clamp(1.1rem,2.5vw,1.75rem);border:1px solid rgba(201,162,39,.25);box-shadow:var(--sh2);position:relative}
+#pe55-root .pe55-txt::before{content:"";position:absolute;left:0;top:10%;bottom:10%;width:3px;border-radius:2px;background:var(--g)}
+#pe55-root .pe55-grp-b .pe55-txt{border-color:rgba(180,100,55,.28)}
+#pe55-root .pe55-grp-b .pe55-txt::before{background:linear-gradient(180deg,#c46830,#8B4513)}
+#pe55-root .pe55-k{margin:0 0 .35rem;font-size:clamp(1.2rem,2.8vw,1.85rem);font-style:italic;font-weight:500;letter-spacing:.06em;color:var(--gd);line-height:1.15}
+#pe55-root .pe55-txt h2{margin:0 0 .5rem;font-size:clamp(.98rem,1.65vw,1.28rem);font-weight:800;letter-spacing:.12em;line-height:1.35}
+#pe55-root .pe55-txt p{margin:0;font-size:clamp(.82rem,1.05vw,.95rem);line-height:1.8;color:var(--tx2)}
+#pe55-root .pe55-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.25,.46,.45,.94)}
+#pe55-root .pe55-fig:hover img{transform:scale(1.04)}
+#pe55-root .pe55-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.45rem .65rem .5rem .85rem;font-size:clamp(.68rem,.95vw,.8rem);font-weight:600;letter-spacing:.1em;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.4);background:linear-gradient(to top,rgba(30,28,26,.88),transparent)}
+#pe55-root .pe55-cap-v{left:0;right:auto;top:0;bottom:0;max-width:42%;width:auto;padding:.75rem .4rem;writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:.18em;font-size:.72rem;background:linear-gradient(90deg,rgba(30,28,26,.82),transparent)}
+@keyframes pe55-hero-logo-in{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+@keyframes pe55-hero-logo-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-5px,0)}}
+@keyframes pe55-hero-bg-zoom{from{transform:scale(0.9)}to{transform:scale(1.06)}}
+@keyframes pe55-hero-in{from{opacity:0;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes pe55-hero-sub-in{from{opacity:0}to{opacity:1}}
+@keyframes pe55-hero-sub-flip{0%,22%{transform:rotateX(0deg)}28%{transform:rotateX(180deg)}28%,72%{transform:rotateX(180deg)}78%{transform:rotateX(360deg)}78%,100%{transform:rotateX(360deg)}}
+@media (prefers-reduced-motion:reduce){
+#pe55-root .pe55-hero-bg img,#pe55-root.pe55-hero-revealed .pe55-hero-bg img{animation:none!important;transform:none!important}
+#pe55-root .pe55-fig:hover img{transform:none}
+#pe55-root .pe55-hero-kicker,#pe55-root .pe55-hero-title,#pe55-root .pe55-hero-sub-flip{animation:none;opacity:0;transform:none}
+#pe55-root.pe55-hero-revealed .pe55-hero-kicker,#pe55-root.pe55-hero-revealed .pe55-hero-title{opacity:1;transform:none;animation:none}
+#pe55-root.pe55-hero-revealed .pe55-hero-sub-flip{opacity:1;transform:none;animation:none}
+#pe55-root .pe55-hero-sub-flip-inner{animation:none!important}
+#pe55-root.pe55-hero-revealed .pe55-hero-sub-flip-inner{transform:none!important}
+#pe55-root .pe55-hero-sub-face{position:relative!important;transform:none!important;backface-visibility:visible!important;-webkit-backface-visibility:visible!important}
+#pe55-root .pe55-hero-sub-face-b{display:none!important}
+#pe55-root .pe55-hero-logo-wrap{animation:none!important}
+#pe55-root.pe55-hero-revealed .pe55-hero-logo-wrap{transform:none!important}
+#pe55-root .pe55-hero-logo{animation:none!important;transform:none!important}
+#pe55-root.pe55-hero-revealed .pe55-hero-logo{opacity:1!important;transform:none!important}
+}
+@media (max-width:900px){
+#pe55-root .pe55-hero{justify-content:flex-start;align-items:flex-start;min-height:clamp(320px,68vh,640px)}
+#pe55-root .pe55-hero-inner{margin:clamp(.75rem,3vw,1.15rem) clamp(.75rem,3vw,1.25rem) 0;max-width:100%;padding-left:0}
+#pe55-root .pe55-ch{grid-template-columns:1fr;gap:.25rem}
+#pe55-root .pe55-ch-num{grid-row:auto;font-size:clamp(2.5rem,18vw,4rem);opacity:.45}
+#pe55-root .pe55-bento,#pe55-root .pe55-bento-m{grid-template-columns:1fr;grid-template-rows:auto}
+#pe55-root .pe55-fig-h,#pe55-root .pe55-bento-m .pe55-fig-h{grid-column:1;grid-row:auto;min-height:clamp(220px,48vw,360px)}
+#pe55-root .pe55-bento-s,#pe55-root .pe55-bento-m .pe55-bento-s{grid-column:1;grid-row:auto}
+#pe55-root .pe55-film{grid-template-columns:1fr}
+#pe55-root .pe55-mosaic{grid-template-columns:repeat(2,1fr)}
+#pe55-root .pe55-cap-v{writing-mode:horizontal-tb;max-width:none;top:auto;bottom:0;right:0;width:100%;padding:.45rem .65rem}
+}
+</style><div id="pe55-root" lang="zh-Hant"><section class="pe55-hero" aria-labelledby="pe55-hero-title"><div class="pe55-hero-bg"><img src="https://www.tcawg.com/data/images/202604/Peru/Machu_Picchu%2C_Peru(1).jpg" alt="" decoding="async" fetchpriority="high"/></div><div class="pe55-hero-scrim" aria-hidden="true"></div><div class="pe55-hero-inner pe55-ff"><div class="pe55-hero-copy"><div class="pe55-hero-logo-wrap"><img class="pe55-hero-logo" src="https://www.tcawg.com/data/images/202604/Peru/55%E5%91%A8%E5%B9%B4logo.png" alt="55週年慶" width="240" height="104" decoding="async"/></div><p class="pe55-hero-kicker">Inti · Chakana · Tahuantinsuyu</p><h2 id="pe55-hero-title" class="pe55-hero-title">走進印加帝國的傳奇</h2><p class="pe55-hero-sub" aria-label="行程重點輪播：祕魯馬丘比丘、亞馬遜雨林、彩虹山、15日；納斯卡線、的的喀喀湖、布蘭卡島、蘆葦浮島"><span class="pe55-hero-sub-flip" aria-hidden="true"><span class="pe55-hero-sub-flip-inner"><span class="pe55-hero-sub-face pe55-hero-sub-face-a">祕魯馬丘比丘 亞馬遜雨林 彩虹山 15日</span><span class="pe55-hero-sub-face pe55-hero-sub-face-b">納斯卡線 的的喀喀湖 布蘭卡島 蘆葦浮島</span></span></span></p></div></div></section><div class="pe55-shell"><div class="pe55-lead-band"><div class="pe55-lead-wrap"><div class="pe55-lead-side"><!-- [SCREEN-YT START] --><div class="pe55-yt-aspect" aria-label="行程影片"><iframe src="https://www.youtube.com/embed/51r87qsx6T4?start=30&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;rel=0" title="祕魯行程介紹影片（YouTube）" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><!-- [SCREEN-YT END] --></div><div class="pe55-lead-body pe55-ff"><p>說真的，祕魯這趟旅程走完後，才知道什麼叫做「世界真的很大」。一開始在<strong>利馬老城區</strong>散步，看著殖民時期的建築與廣場，旅程就慢慢有了感覺。沿著<strong>泛美公路</strong>到<strong>帕拉卡斯</strong>，再搭船看<strong>布蘭卡島</strong>滿滿的海鳥與海獅，海風一吹，整個人都醒了。後來從空中俯瞰<strong>納斯卡線</strong>，那些巨大圖案真的讓人忍不住一直猜：古人到底怎麼做到的？</p><p>接著飛到<strong>馬爾多納多港</strong>，走進<strong>亞馬遜熱帶雨林</strong>，夜晚的叢林聲音多到像交響樂。再到印加古都<strong>庫斯科</strong>，穿越<strong>聖谷</strong>到<strong>熱水鎮</strong>，當我第一次站在<strong>馬丘比丘</strong>面前，那種「終於來到這裡了」的感覺真的很難形容。還有色彩像畫布一樣的<strong>彩虹山</strong>，以及高原上的<strong>的的喀喀湖</strong>，登上<strong>蘆葦浮島</strong>與<strong>塔吉利島</strong>，才發現原來文化與自然可以如此純粹。</p><p>最後回到<strong>利馬米拉弗洛雷斯區</strong>欣賞城市景觀與海岸風情，為整段安地斯與亞馬遜交織的旅程畫下餘韻。</p></div><blockquote class="pe55-pull pe55-ff">這趟祕魯，不只是旅行，而是一段會一直想拿出來說給朋友聽的故事。</blockquote></div></div><!-- [SCREEN-IMG-WALL START] --><div class="pe55-wall" aria-label="祕魯實景圖牆（占位）"><p class="pe55-wall-title pe55-ff">PERU IN FRAMES · 高密度實景圖牆（占位）</p><div class="pe55-mosaic"><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Plaza_de_Armas%2C_Cusco%2C_Peru%2C_2015-01-29%2C_DD_83.JPG/960px-Plaza_de_Armas%2C_Cusco%2C_Peru%2C_2015-01-29%2C_DD_83.JPG" alt="庫斯科武器廣場" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">庫斯科</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Sacsayhuaman_Fortress%2C_Cusco%2C_Peru.jpg/960px-Sacsayhuaman_Fortress%2C_Cusco%2C_Peru.jpg" alt="薩克塞華曼要塞" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">薩克塞華曼</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Moray_%28Peru%29.jpg/960px-Moray_%28Peru%29.jpg" alt="莫瑞圓形梯田" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">莫瑞梯田</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Maras_salt_ponds_2017.jpg/960px-Maras_salt_ponds_2017.jpg" alt="馬拉斯鹽田" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">馬拉斯鹽田</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Pisac2794.jpg/960px-Pisac2794.jpg" alt="皮薩克遺跡" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">皮薩克</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/OllantaytamboSB.jpg/960px-OllantaytamboSB.jpg" alt="奧揚泰坦博" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">奧揚泰坦博</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Isla_Taquile_Lago_Titicaca_%284463616812%29.jpg/960px-Isla_Taquile_Lago_Titicaca_%284463616812%29.jpg" alt="的的喀喀湖塔吉利島" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">塔吉利島</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Rio_Madre_de_Dios%2C_Peru.JPG/960px-Rio_Madre_de_Dios%2C_Peru.JPG" alt="馬德雷德迪奧斯河" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">馬德雷德迪奧斯河</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Huayna_Picchu_2013.jpg/960px-Huayna_Picchu_2013.jpg" alt="瓦納比丘俯瞰" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">瓦納比丘</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Intihuatana%2C_Machu_Picchu%2C_Peru.jpg/960px-Intihuatana%2C_Machu_Picchu%2C_Peru.jpg" alt="馬丘比丘栓日石" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">栓日石</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Lama_in_Sacred_Valley%2C_Peru.jpg/960px-Lama_in_Sacred_Valley%2C_Peru.jpg" alt="聖谷羊駝" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">聖谷・羊駝</figcaption></figure><figure class="pe55-fig pe55-fig-g"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Chinchero_Cusco2_0.jpg/960px-Chinchero_Cusco2_0.jpg" alt="欽切羅小鎮" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">欽切羅</figcaption></figure></div></div><!-- [SCREEN-IMG-WALL END] --><section class="pe55-grp pe55-grp-a" aria-labelledby="pe55-g1-h"><header class="pe55-ch pe55-ff"><span class="pe55-ch-num" aria-hidden="true">01</span><div class="pe55-ch-meta"><p class="pe55-ch-en">Lima · Paracas · Nazca</p><p class="pe55-ch-zh">濱海老城、鳥島與空中謎圖</p></div></header><div class="pe55-bento"><figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Nazca-lineas-arana-c01.jpg/960px-Nazca-lineas-arana-c01.jpg" alt="納斯卡線地畫空拍" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Nazca Lines · 大地謎圖</figcaption></figure><div class="pe55-bento-s"><div class="pe55-txt pe55-ff"><p class="pe55-k">Donde el mar susurra</p><h2 id="pe55-g1-h">太平洋岸的第一章</h2><p>從<strong>利馬</strong>殖民廣場到<strong>帕拉卡斯</strong>海風，再以空拍視角俯瞰<strong>納斯卡線</strong>——旅程以海岸與沙漠的謎團開場。以下多圖為素材占位，定稿請換貴社圖庫。</p></div><figure class="pe55-fig pe55-fig-t"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Islas_Ballestas%2C_Peru.jpg/960px-Islas_Ballestas%2C_Peru.jpg" alt="布蘭卡島" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">布蘭卡島（鳥島）</figcaption></figure></div><div class="pe55-film-wrap"><div class="pe55-film"><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Lima_Plaza_de_Armas_%282%29.jpg/960px-Lima_Plaza_de_Armas_%282%29.jpg" alt="利馬武器廣場" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">利馬老城區</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Paracas_National_Reserve%2C_Ica%2C_Peru.jpg/960px-Paracas_National_Reserve%2C_Ica%2C_Peru.jpg" alt="帕拉卡斯海岸" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">帕拉卡斯海濱</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Bas%C3%ADlica_y_Convento_de_San_Francisco%2C_Lima%2C_Per%C3%BA%2C_2015-07-21%2C_DD_70.JPG/960px-Bas%C3%ADlica_y_Convento_de_San_Francisco%2C_Lima%2C_Per%C3%BA%2C_2015-07-21%2C_DD_70.JPG" alt="聖方濟各聖殿" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">聖方濟各聖殿</figcaption></figure></div><div class="pe55-film"><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Huacachina%2C_Peru_%286924540864%29.jpg/960px-Huacachina%2C_Peru_%286924540864%29.jpg" alt="瓦卡奇納绿洲" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">瓦卡奇納绿洲</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Nazca-chauchilla-c07.jpg/960px-Nazca-chauchilla-c07.jpg" alt="納斯卡周邊乾燥高原" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">納斯卡周邊地貌</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Candelabro_de_Paracas_02.JPG/960px-Candelabro_de_Paracas_02.JPG" alt="帕拉卡斯燭台地畫" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">帕拉卡斯燭台地畫</figcaption></figure></div></div></div></section><section class="pe55-grp pe55-grp-b" aria-labelledby="pe55-g2-h"><header class="pe55-ch pe55-ff"><span class="pe55-ch-num" aria-hidden="true">02</span><div class="pe55-ch-meta"><p class="pe55-ch-en">Amazon · Machu Picchu · Titicaca</p><p class="pe55-ch-zh">雨林、天空之城與高原湖水</p></div></header><div class="pe55-bento pe55-bento-m"><div class="pe55-bento-s"><div class="pe55-txt pe55-ff"><p class="pe55-k">Del silencio al cielo</p><h2 id="pe55-g2-h">雨林與高原的交會</h2><p><strong>亞馬遜</strong>夜聲、<strong>馬丘比丘</strong>晨光、<strong>彩虹山</strong>礦物色帶與<strong>的的喀喀湖</strong>水上部落——以下多圖為素材占位，定稿請換貴社圖庫。</p></div><figure class="pe55-fig pe55-fig-t"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜雨林" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">亞馬遜熱帶雨林</figcaption></figure></div><figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/960px-Machu_Picchu%2C_Peru.jpg" alt="馬丘比丘" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Machu Picchu · 天空之城</figcaption></figure><div class="pe55-film-wrap"><div class="pe55-film"><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vinicunca%2C_Peru.jpg/960px-Vinicunca%2C_Peru.jpg" alt="彩虹山" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">彩虹山</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Uros_islands%2C_Lake_Titicaca_01.jpg/960px-Uros_islands%2C_Lake_Titicaca_01.jpg" alt="的的喀喀湖蘆葦浮島" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">的的喀喀湖・蘆葦浮島</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Lima_Miraflores%2C_Peru.jpg/960px-Lima_Miraflores%2C_Peru.jpg" alt="米拉弗洛雷斯" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">米拉弗洛雷斯區</figcaption></figure></div><div class="pe55-film"><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Aguas_Calientes_Station_%285687394569%29.jpg/960px-Aguas_Calientes_Station_%285687394569%29.jpg" alt="熱水鎮車站" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">熱水鎮（馬丘比丘村）</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Vue_a%C3%A9rienne_de_Puerto_Maldonado.jpg/960px-Vue_a%C3%A9rienne_de_Puerto_Maldonado.jpg" alt="馬爾多納多港空拍" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">馬爾多納多港</figcaption></figure><figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/PeruRail_train_on_Machu_Picchu_railway.jpg/960px-PeruRail_train_on_Machu_Picchu_railway.jpg" alt="前往馬丘比丘觀光列車" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">觀光列車路段</figcaption></figure></div></div></div></section></div><script>
 (function(){
-  var root=document.getElementById("pe55-root");
-  if(!root)return;
-  root.querySelectorAll(".pe55-stagger").forEach(function(w){
-    [].forEach.call(w.children,function(c,i){c.style.setProperty("--pe55-d",(0.07+0.09*i)+"s");});
-  });
-  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-  var els=root.querySelectorAll(".pe55-anim-onview,.pe55-reveal");
-  if(!els.length)return;
-  root.classList.add("pe55-js-motion");
-  if(!("IntersectionObserver" in window)){els.forEach(function(el){el.classList.add("pe55-anim-in");});return;}
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add("pe55-anim-in");obs.unobserve(en.target);}});
-  },{rootMargin:"0px 0px -6% 0px",threshold:0.06});
-  els.forEach(function(el){obs.observe(el);});
+var r=document.getElementById("pe55-root");
+if(!r)return;
+var h=r.querySelector(".pe55-hero");
+if(!h)return;
+function reveal(){r.classList.add("pe55-hero-revealed");}
+if(!("IntersectionObserver"in window)){reveal();return;}
+var io=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){reveal();io.disconnect();}});
+},{threshold:0.18,rootMargin:"0px 0px -6% 0px"});
+io.observe(h);
 })();
 </script></div></div>
