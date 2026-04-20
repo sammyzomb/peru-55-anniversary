@@ -5,7 +5,7 @@
 #pe55-root,#pe55-root *{box-sizing:border-box}
 #pe55-root{
 --g:#b8942a;--gd:#5c5348;--bg:#efeae3;--paper:#faf8f4;--tx:#2a2622;--tx2:#575045;
---r:clamp(10px,1.1vw,15px);--gap:clamp(14px,1.6vw,24px);--sh:0 22px 50px rgba(32,28,24,.07);--sh2:0 3px 28px rgba(32,28,24,.05);
+--r:clamp(10px,1.1vw,15px);--sh2:0 3px 28px rgba(32,28,24,.05);
 position:relative;width:100%;margin:0;padding:0;color:var(--tx);
 font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
 -webkit-font-smoothing:antialiased;
@@ -29,7 +29,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-hero-logo{width:clamp(80px,10.4vw,120px)}
 }
 #pe55-root .pe55-hero-kicker{margin:0 0 .5rem;font-family:"Caveat",cursive;font-size:clamp(1.76rem,3.38vw,2.41rem);font-weight:700;font-style:normal;letter-spacing:.04em;text-transform:none;color:rgba(245,238,228,.98);text-shadow:0 1px 2px rgba(0,0,0,.45),0 2px 10px rgba(0,0,0,.38);opacity:0;animation:none;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}
-#pe55-root .pe55-hero-title{margin:0 0 .72rem;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:clamp(2.4rem,5.8vw,3.8rem);font-weight:900;letter-spacing:.08em;line-height:1.18;color:#fff;white-space:nowrap;-webkit-text-stroke:0;text-shadow:0 1px 2px rgba(0,0,0,.72),0 4px 16px rgba(0,0,0,.48);opacity:0;animation:none;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}
+#pe55-root .pe55-hero-title{margin:0 0 .72rem;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:clamp(2.4rem,5.8vw,3.8rem);font-weight:900;letter-spacing:.08em;line-height:1.18;color:#fff;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.72),0 4px 16px rgba(0,0,0,.48);opacity:0;animation:none;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}
 #pe55-root .pe55-hero-sub{margin:0;font-size:clamp(1.42rem,2.65vw,1.72rem);font-weight:700;letter-spacing:.08em;line-height:1.55;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.68),0 3px 12px rgba(0,0,0,.48);text-align:left}
 #pe55-root .pe55-hero-sub-flip{display:block;position:relative;min-height:1.55em;perspective:960px;opacity:0;animation:none}
 #pe55-root.pe55-hero-revealed .pe55-hero-sub-flip{animation:pe55-hero-sub-in 1.45s cubic-bezier(.19,.92,.35,1) 1.42s forwards}
@@ -90,13 +90,25 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-lead-body strong{font-weight:600;color:var(--tx)}
 #pe55-root .pe55-grp{position:relative;margin:0;width:100%;padding:clamp(2.6rem,5.5vw,4.5rem) clamp(1rem,4vw,3.5rem);box-sizing:border-box}
 #pe55-root .pe55-grp-a{background:linear-gradient(165deg,#e6edf5 0%,#eef3f9 42%,#ebe8e2 100%);border-top:1px solid rgba(26,58,92,.08);padding:0 0 clamp(2.6rem,5.5vw,4.5rem)}
+#pe55-root .pe55-grp-a:has(+ .pe55-grp-b){padding-bottom:clamp(.35rem,.9vw,.65rem)}
 #pe55-root .pe55-grp-a>.pe55-bento{padding-left:clamp(1rem,4vw,3.5rem);padding-right:clamp(1rem,4vw,3.5rem)}
-#pe55-root .pe55-grp-b{background:linear-gradient(165deg,#efe4dc 0%,#faf4ef 44%,#ebe5df 100%);border-top:1px solid rgba(120,72,48,.1);padding-bottom:clamp(3rem,6vw,4.75rem)}
+#pe55-root .pe55-grp-b{background:linear-gradient(165deg,#efe4dc 0%,#faf4ef 44%,#ebe5df 100%);border-top:0;padding:0 0 clamp(3rem,6vw,4.75rem);margin-top:0}
 #pe55-root .pe55-ch{position:relative;z-index:1;max-width:min(72rem,100%);width:100%;margin:0 auto clamp(1.5rem,3vw,2.25rem);padding:0 0 .35rem;display:grid;grid-template-columns:auto 1fr;gap:.65rem 1.35rem;align-items:end}
 #pe55-root .pe55-ch-num{grid-row:1/3;font-size:clamp(4.5rem,16.5vw,7.65rem);font-weight:200;line-height:.82;color:rgba(184,148,42,.28);letter-spacing:-.03em}
 #pe55-root .pe55-ch-meta{padding-bottom:.35rem;border-bottom:1px solid rgba(42,38,34,.1)}
 #pe55-root .pe55-ch-en{margin:0 0 .28rem;font-size:clamp(1.45rem,3.8vw,2.55rem);font-weight:500;font-style:italic;letter-spacing:.035em;line-height:1.12;color:#2a4a66}
 #pe55-root .pe55-grp-b .pe55-ch-en{color:#6a4030}
+#pe55-root .pe55-grp-b .pe55-b-hero-stack{display:block;width:100%;max-width:none;margin:0 0 clamp(1.1rem,2.2vw,1.65rem);padding:0;box-sizing:border-box;float:none;clear:both}
+#pe55-root .pe55-grp-b .pe55-hero3{position:relative;background:linear-gradient(180deg,#c5ddf2 0%,#dfeaf5 18%,#efe8e0 52%,#ebe5df 100%);width:100%;min-height:min(min(1680px,98vh),max(640px,calc(72vh + 30vw)));overflow:hidden}
+#pe55-root .pe55-grp-b .pe55-hero3-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(25,70,120,.12) 0%,rgba(20,55,95,.05) 9%,transparent 26%,transparent 100%)}
+#pe55-root .pe55-grp-b .pe55-hero3 img{position:absolute;left:0;top:0;z-index:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 86%;transform:translateZ(0);filter:saturate(1.14) brightness(1.05) contrast(1.02)}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-ch--on-a-hero{position:absolute;left:0;right:0;top:0;z-index:2;margin:0;max-width:none;width:100%;padding:clamp(.85rem,2.2vw,1.55rem) clamp(1rem,4vw,3.25rem) clamp(.65rem,1.8vw,1.1rem);display:grid;grid-template-columns:auto 1fr;gap:.45rem .95rem;align-items:start}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-ch-meta{padding-bottom:0;border-bottom:0}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-ch-num{color:rgba(255,248,235,.52);text-shadow:0 1px 8px rgba(0,0,0,.55)}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-ch-en{margin:0 0 .18rem;font-family:"Caveat",cursive;font-size:clamp(1.05rem,2.85vw,1.5rem);font-weight:700;font-style:normal;letter-spacing:.04em;line-height:1.2;color:rgba(254,252,248,.98);text-shadow:0 1px 3px rgba(0,0,0,.55),0 2px 18px rgba(0,0,0,.42);text-wrap:balance}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-ch-zh{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:clamp(2.55rem,6.35vw,4.05rem);font-weight:900;letter-spacing:.08em;line-height:1.15;color:rgba(255,253,250,.98);text-shadow:0 1px 3px rgba(0,0,0,.52),0 2px 14px rgba(0,0,0,.42);opacity:1}
+#pe55-root .pe55-grp-b .pe55-hero3 .pe55-hero3-note{margin:.42rem 0 0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:clamp(1.15rem,3.35vw,1.85rem);font-weight:800;letter-spacing:.12em;line-height:1.25;color:rgba(255,251,245,.95);text-shadow:0 1px 3px rgba(0,0,0,.5),0 2px 12px rgba(0,0,0,.38)}
+@media (max-width:680px){#pe55-root .pe55-grp-b .pe55-hero3{min-height:min(min(1280px,96vh),max(520px,calc(74vh + 38vw)))}#pe55-root .pe55-grp-b .pe55-hero3 img{width:100%;height:100%;object-fit:cover;object-position:50% 84%}}
 #pe55-root .pe55-ch-zh{margin:0;font-size:.8rem;font-weight:600;letter-spacing:.22em;color:var(--tx2);opacity:.92}
 #pe55-root .pe55-grp-a .pe55-ch-en{margin:0 0 .28rem;font-family:"Caveat",cursive;font-size:clamp(1.05rem,2.85vw,1.5rem);font-weight:700;font-style:normal;letter-spacing:.04em;line-height:1.2;color:#2a4a66;text-wrap:balance}
 #pe55-root .pe55-grp-a .pe55-ch-zh{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;font-size:clamp(2.55rem,6.35vw,4.05rem);font-weight:900;letter-spacing:.08em;line-height:1.15}
@@ -121,24 +133,37 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-film-wrap{grid-column:1/-1;grid-row:3;display:flex;flex-direction:column;gap:0;margin-top:0}
 #pe55-root .pe55-film{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
 #pe55-root .pe55-grp-a > .pe55-bento.pe55-bento--a-gallery{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.28fr) minmax(0,.8fr);grid-template-rows:minmax(clamp(180px,30vw,360px),auto) auto;gap:clamp(14px,1.5vw,20px);padding:clamp(1.35rem,2.8vw,2.5rem) clamp(1rem,4vw,3.5rem);background:linear-gradient(165deg,#e6edf5 0%,#eef3f9 42%,#ebe8e2 100%);align-items:stretch;box-sizing:border-box}
+#pe55-root .pe55-grp-a > .pe55-bento.pe55-bento--a-gallery{padding-bottom:clamp(.65rem,1.35vw,1.05rem)}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt{grid-column:1;grid-row:1;align-self:start;margin:0;padding:0 clamp(.25rem,.8vw,.5rem) 0 0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;border:0;box-shadow:none;background:transparent;border-radius:0}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt::before{display:none}
-#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-title{margin:0 0 .65rem;font-size:clamp(1.02rem,1.6vw,1.32rem);font-weight:700;letter-spacing:.06em;line-height:1.35;color:#2a4a66;padding-bottom:.42rem;border-bottom:2px solid rgba(42,74,102,.32);width:fit-content;max-width:100%}
-#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt p{margin:0 0 .82rem;color:rgba(42,38,34,.82);font-size:clamp(.76rem,.95vw,.88rem);line-height:1.78;letter-spacing:.03em}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-sub{margin:clamp(.55rem,1.25vw,.85rem) 0 .32rem;font-size:clamp(1.08rem,1.72vw,1.38rem);font-weight:700;letter-spacing:.045em;line-height:1.32;color:#2a4a66;width:fit-content;max-width:100%}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt > .pe55-a-grid-sub:first-child{margin-top:0;margin-bottom:.38rem}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt p{margin:0 0 .88rem;color:rgba(42,38,34,.82);font-size:clamp(.95rem,1.22vw,1.08rem);line-height:1.76;letter-spacing:.025em}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-a-grid-txt p:last-child{margin-bottom:0}
-#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-h{grid-column:2;grid-row:1;min-height:clamp(180px,30vw,360px);border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
-#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-t{grid-column:3;grid-row:1;min-height:clamp(180px,30vw,360px);border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-h{grid-column:2;grid-row:1;min-height:clamp(180px,30vw,360px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-t{grid-column:3;grid-row:1;min-height:clamp(180px,30vw,360px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-film-wrap{grid-column:1/-1;grid-row:2;margin:0}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-film{gap:clamp(14px,1.5vw,20px)}
-#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-s{min-height:clamp(130px,20vw,240px);border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+#pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-s{min-height:clamp(175px,32vw,300px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.22)}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig{background:#d9e3ee}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-cap-v{writing-mode:horizontal-tb;max-width:none;top:auto;bottom:0;left:0;right:auto;width:auto;padding:.42rem .62rem;letter-spacing:.08em;font-size:clamp(.65rem,.82vw,.74rem);background:linear-gradient(to top,rgba(0,0,0,.55),transparent);border-radius:0}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-cap{background:linear-gradient(to top,rgba(0,0,0,.5),transparent);padding:.42rem .62rem .48rem;font-size:clamp(.65rem,.82vw,.74rem)}
-#pe55-root .pe55-wall{margin:clamp(1rem,2.5vw,1.75rem) 0 clamp(2rem,4vw,3.25rem);width:100%;padding:0;box-sizing:border-box}
-#pe55-root .pe55-wall-title{margin:0 0 clamp(1rem,2vw,1.35rem);max-width:none;width:100%;padding:0;font-size:clamp(.85rem,1.2vw,.95rem);font-weight:800;letter-spacing:.28em;color:var(--tx2);text-align:center}
-#pe55-root .pe55-mosaic{max-width:none;width:100%;margin:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0}
-#pe55-root .pe55-fig-g{aspect-ratio:1/1;min-height:clamp(112px,20vw,198px);background:#dcd6cc}
-@media (max-width:1100px){#pe55-root .pe55-mosaic{grid-template-columns:repeat(3,1fr)}}
+#pe55-root .pe55-grp-b > .pe55-bento.pe55-bento--a-gallery{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.28fr) minmax(0,.8fr);grid-template-rows:minmax(clamp(180px,30vw,360px),auto) auto;gap:clamp(14px,1.5vw,20px);padding:clamp(1.35rem,2.8vw,2.5rem) clamp(1rem,4vw,3.5rem);background:linear-gradient(165deg,#ebe5df 0%,#faf4ef 42%,#efe8e0 100%);align-items:stretch;box-sizing:border-box}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt{grid-column:3;grid-row:1;align-self:start;margin:0;padding:0 0 0 clamp(.25rem,.8vw,.5rem);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;border:0;box-shadow:none;background:transparent;border-radius:0}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt::before{display:none}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-sub{margin:clamp(.55rem,1.25vw,.85rem) 0 .32rem;font-size:clamp(1.08rem,1.72vw,1.38rem);font-weight:700;letter-spacing:.045em;line-height:1.32;color:#6a4030;width:fit-content;max-width:100%}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt > .pe55-a-grid-sub:first-child{margin-top:0;margin-bottom:.38rem}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt p{margin:0 0 .88rem;color:rgba(42,38,34,.82);font-size:clamp(.95rem,1.22vw,1.08rem);line-height:1.76;letter-spacing:.025em}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt p:last-child{margin-bottom:0}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-h{grid-column:1;grid-row:1;min-height:clamp(180px,30vw,360px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-t{grid-column:2;grid-row:1;min-height:clamp(180px,30vw,360px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film-wrap{grid-column:1/-1;grid-row:2;margin:0}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film{gap:clamp(14px,1.5vw,20px)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s{min-height:clamp(175px,32vw,300px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig{background:#e3d8cf}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-cap-v{writing-mode:horizontal-tb;max-width:none;top:auto;bottom:0;left:0;right:auto;width:auto;padding:.42rem .62rem;letter-spacing:.08em;font-size:clamp(.65rem,.82vw,.74rem);background:linear-gradient(to top,rgba(0,0,0,.55),transparent);border-radius:0}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-cap{background:linear-gradient(to top,rgba(0,0,0,.5),transparent);padding:.42rem .62rem .48rem;font-size:clamp(.65rem,.82vw,.74rem)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-h .pe55-cap{border-radius:0 0 clamp(12px,1.3vw,20px) clamp(12px,1.3vw,20px)}
 #pe55-root .pe55-txt{background:var(--paper);border-radius:var(--r);padding:clamp(1.35rem,2.8vw,2.05rem);border:1px solid rgba(42,38,34,.07);box-shadow:0 1px 0 rgba(255,255,255,.85) inset,0 12px 40px rgba(32,28,24,.04);position:relative}
 #pe55-root .pe55-txt::before{content:"";position:absolute;left:0;top:12%;bottom:12%;width:2px;border-radius:2px;background:linear-gradient(180deg,rgba(184,148,42,.85),rgba(184,148,42,.25))}
 #pe55-root .pe55-grp-b .pe55-txt{border-color:rgba(42,38,34,.08)}
@@ -147,6 +172,8 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-txt h2{margin:0 0 .65rem;font-size:clamp(.95rem,1.55vw,1.22rem);font-weight:700;letter-spacing:.18em;line-height:1.45;color:var(--tx)}
 #pe55-root .pe55-txt p{margin:0;font-size:clamp(.86rem,1.08vw,.98rem);line-height:1.92;color:var(--tx2);letter-spacing:.02em}
 #pe55-root .pe55-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.25,.46,.45,.94)}
+#pe55-root .pe55-bento--a-gallery .pe55-fig img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:none!important;object-fit:cover!important;box-sizing:border-box!important}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-t img{object-position:58% 72%!important}
 #pe55-root .pe55-fig:hover img{transform:scale(1.04)}
 #pe55-root .pe55-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.45rem .65rem .5rem .85rem;font-size:clamp(.68rem,.95vw,.8rem);font-weight:600;letter-spacing:.1em;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.4);background:linear-gradient(to top,rgba(30,28,26,.88),transparent)}
 #pe55-root .pe55-cap-v{left:0;right:auto;top:0;bottom:0;max-width:42%;width:auto;padding:.75rem .4rem;writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:.18em;font-size:.72rem;background:linear-gradient(90deg,rgba(30,28,26,.82),transparent)}
@@ -183,12 +210,9 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-pull .pe55-pull-a,#pe55-root .pe55-pull .pe55-pull-b{animation:none!important;opacity:1!important;transform:none!important}
 #pe55-root .pe55-lead-totem img{animation:none!important;transform:none!important}
 #pe55-root .pe55-yt-below-orbit-img{animation:none!important;transform:none!important}
-#pe55-root .pe55-elev-totem-img{animation:none!important;transform:none!important}
 }
 @media (max-width:680px){
 #pe55-root .pe55-elev-layout{flex-direction:column;gap:clamp(.25rem,.8vw,.5rem);padding-top:clamp(.15rem,.5vw,.35rem)}
-#pe55-root .pe55-elev-totem{width:clamp(72px,22vw,120px);order:0;margin-left:0}
-#pe55-root .pe55-elev-totem-inner{transform:none}
 #pe55-root .pe55-elev-bleed{width:100%;transform:none;order:1}
 }
 @media (max-width:900px){
@@ -204,9 +228,13 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-fig-h,#pe55-root .pe55-bento-m .pe55-fig-h{grid-column:1;grid-row:auto;min-height:clamp(220px,48vw,360px)}
 #pe55-root .pe55-bento-s,#pe55-root .pe55-bento-m .pe55-bento-s{grid-column:1;grid-row:auto}
 #pe55-root .pe55-film{grid-template-columns:1fr}
-#pe55-root .pe55-mosaic{grid-template-columns:repeat(2,1fr)}
 #pe55-root .pe55-cap-v{writing-mode:horizontal-tb;max-width:none;top:auto;bottom:0;right:0;width:100%;padding:.45rem .65rem}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-cap-v{width:auto;right:auto;max-width:85%}
+#pe55-root .pe55-grp-b > .pe55-bento.pe55-bento--a-gallery{grid-template-columns:1fr;grid-template-rows:auto}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-a-grid-txt{grid-column:1;grid-row:auto;padding:0}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-h,#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-t{grid-column:1;grid-row:auto;min-height:clamp(200px,48vw,320px)}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film-wrap{grid-column:1}
+#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-cap-v{width:auto;right:auto;max-width:85%}
 }
 #pe55-anchor-0,#pe55-anchor-1,#pe55-anchor-2,#pe55-anchor-3,#pe55-anchor-4,#pe55-anchor-elev{scroll-margin-top:clamp(.5rem,2vh,1.25rem)}
 #pe55-root .pe55-highlights{margin:0;width:100%;max-width:none;padding:0;background:#ebe6df;box-sizing:border-box}
@@ -255,16 +283,13 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-hl-sub{margin:0;font-size:clamp(1.04rem,1.55vw,1.22rem);line-height:1.95;color:var(--tx2);letter-spacing:.02em}
 #pe55-root .pe55-hl-sub strong{font-weight:700;color:var(--g);letter-spacing:.02em}
 #pe55-root .pe55-hl-sub+.pe55-hl-sub{margin-top:.45rem}
-#pe55-root .pe55-elev{margin:0;width:100%;padding:0 0 clamp(2rem,4.2vw,3.25rem);box-sizing:border-box;background:#faf7f2;overflow-x:hidden;overflow-y:visible;position:relative;z-index:0}
-#pe55-root .pe55-elev-layout{max-width:min(72rem,96vw);margin:0 auto;padding:0 clamp(.5rem,2.8vw,1.35rem);display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(.15rem,.8vw,.5rem);box-sizing:border-box;overflow-x:hidden;overflow-y:visible;position:relative;z-index:0}
-#pe55-root .pe55-elev-totem{flex:0 0 auto;width:clamp(128px,18vw,210px);align-self:center;pointer-events:none;opacity:1;position:relative;z-index:4;overflow:visible;margin-left:0;margin-right:clamp(.5rem,1.2vw,1rem)}
-#pe55-root .pe55-elev-totem-inner{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;transform:none;will-change:transform}
-#pe55-root .pe55-elev-totem-img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;opacity:.32;mix-blend-mode:multiply;animation:pe55-lead-totem-spin 90s linear infinite;will-change:transform}
+#pe55-root .pe55-elev{margin:0;width:100%;padding:0 0 clamp(.25rem,.55vw,.45rem);box-sizing:border-box;background:#faf7f2;overflow-x:hidden;overflow-y:visible;position:relative;z-index:0}
+#pe55-root .pe55-elev-layout{max-width:min(90rem,99vw);margin:0 auto;padding:0 clamp(.25rem,1.2vw,.65rem);display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0;box-sizing:border-box;overflow-x:hidden;overflow-y:visible;position:relative;z-index:0}
 #pe55-root .pe55-elev-bleed{flex:1;min-width:0;max-width:none;margin:0;padding:0;box-sizing:border-box;position:relative;z-index:1}
 #pe55-root .pe55-elev-fig{margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:#f4f1eb;box-shadow:none;position:relative;width:100%}
-#pe55-root .pe55-elev-fig::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to right,rgba(250,247,242,.92) 0%,rgba(250,247,242,.55) 4%,rgba(250,247,242,0) 14%,rgba(250,247,242,0) 84%,rgba(250,247,242,.55) 96%,rgba(250,247,242,.88) 100%),linear-gradient(to bottom,rgba(250,247,242,.72) 0%,rgba(250,247,242,.28) 3%,rgba(250,247,242,0) 10%,rgba(250,247,242,0) 88%,rgba(250,247,242,.28) 97%,rgba(250,247,242,.72) 100%)}
+#pe55-root .pe55-elev-fig::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to right,rgba(250,247,242,.82) 0%,rgba(250,247,242,.35) 2.5%,rgba(250,247,242,0) 7%,rgba(250,247,242,0) 93%,rgba(250,247,242,.35) 97.5%,rgba(250,247,242,.82) 100%),linear-gradient(to bottom,rgba(250,247,242,.65) 0%,rgba(250,247,242,.2) 2.5%,rgba(250,247,242,0) 8%,rgba(250,247,242,0) 90%,rgba(250,247,242,.2) 97%,rgba(250,247,242,.65) 100%)}
 #pe55-root .pe55-elev-img{display:block;width:100%;height:auto;vertical-align:middle}
-@media (max-width:680px){#pe55-root .pe55-elev-totem{width:clamp(72px,18vw,110px);margin-right:clamp(.35rem,.8vw,.65rem)}}
+#pe55-root .pe55-elev-amazon-div{margin:0;width:100vw;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:0;box-sizing:border-box;background-color:#faf7f2;background-image:url("https://www.tcawg.com/data/images/202604/Peru/LINE.png");background-repeat:no-repeat;background-position:center center;background-size:100% auto;min-height:clamp(52px,11vw,104px);height:clamp(52px,11vw,104px);line-height:0;overflow:hidden}
 </style>
 <!-- 圖騰位置：預設疊在長文右側。改疊在 YT 下方請將下一行改成：<div id="pe55-root" class="pe55-totem--under-yt" lang="zh-Hant"> -->
 <div id="pe55-root" lang="zh-Hant">
@@ -276,7 +301,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 <div class="pe55-hero-logo-wrap"><img class="pe55-hero-logo" src="https://www.tcawg.com/data/images/202604/Peru/55%E5%91%A8%E5%B9%B4logo.png" alt="55週年慶" width="240" height="104" decoding="async"/></div>
 <p class="pe55-hero-kicker">Inti · Chakana · Tahuantinsuyu</p>
 <h2 id="pe55-hero-title" class="pe55-hero-title">走進印加帝國的傳奇</h2>
-<p class="pe55-hero-sub" aria-label="行程重點輪播：祕魯馬丘比丘、亞馬遜雨林、彩虹山、15日；納斯卡線、的的喀喀湖、布蘭卡島、蘆葦浮島"><span class="pe55-hero-sub-flip" aria-hidden="true"><span class="pe55-hero-sub-flip-inner"><span class="pe55-hero-sub-face pe55-hero-sub-face-a">祕魯馬丘比丘 亞馬遜雨林 彩虹山 15日</span><span class="pe55-hero-sub-face pe55-hero-sub-face-b">納斯卡線 的的喀喀湖 布蘭卡島 蘆葦浮島</span></span></span></p>
+<p class="pe55-hero-sub" aria-label="行程重點輪播：祕魯馬丘比丘、亞馬遜雨林、全景觀光列車、15日；納斯卡線、的的喀喀湖、布蘭卡島、蘆葦浮島"><span class="pe55-hero-sub-flip" aria-hidden="true"><span class="pe55-hero-sub-flip-inner"><span class="pe55-hero-sub-face pe55-hero-sub-face-a">祕魯馬丘比丘 亞馬遜雨林 全景觀光列車 15日</span><span class="pe55-hero-sub-face pe55-hero-sub-face-b">納斯卡線 的的喀喀湖 布蘭卡島 蘆葦浮島</span></span></span></p>
 </div>
 </div>
 </section>
@@ -300,7 +325,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 </div>
 <div class="pe55-lead-body pe55-ff">
 <p>說真的，祕魯這趟旅程走完後，才知道什麼叫做「世界真的很大」。一開始在<strong>利馬老城區</strong>散步，看著殖民時期的建築與廣場，旅程就慢慢有了感覺。沿著<strong>泛美公路</strong>到<strong>帕拉卡斯</strong>，再搭船看<strong>布蘭卡島</strong>滿滿的海鳥與海獅，海風一吹，整個人都醒了。後來從空中俯瞰<strong>納斯卡線</strong>，那些巨大圖案真的讓人忍不住一直猜：古人到底怎麼做到的？</p>
-<p>接著飛到<strong>馬爾多納多港</strong>，走進<strong>亞馬遜熱帶雨林</strong>，夜晚的叢林聲音多到像交響樂。再到印加古都<strong>庫斯科</strong>，穿越<strong>聖谷</strong>到<strong>熱水鎮</strong>，當我第一次站在<strong>馬丘比丘</strong>面前，那種「終於來到這裡了」的感覺真的很難形容。還有色彩像畫布一樣的<strong>彩虹山</strong>，以及高原上的<strong>的的喀喀湖</strong>，登上<strong>蘆葦浮島</strong>與<strong>塔吉利島</strong>，才發現原來文化與自然可以如此純粹。</p>
+<p>接著飛到<strong>馬爾多納多港</strong>，走進<strong>亞馬遜熱帶雨林</strong>，夜晚的叢林聲音多到像交響樂。再到印加古都<strong>庫斯科</strong>，穿越<strong>聖谷</strong>到<strong>熱水鎮</strong>，當我第一次站在<strong>馬丘比丘</strong>面前，那種「終於來到這裡了」的感覺真的很難形容。還有<strong>全景觀光列車</strong>飽覽山景，以及高原上的<strong>的的喀喀湖</strong>，登上<strong>蘆葦浮島</strong>與<strong>塔吉利島</strong>，才發現原來文化與自然可以如此純粹。</p>
 <p>最後回到<strong>利馬米拉弗洛雷斯區</strong>欣賞城市景觀與海岸風情，為整段安地斯與亞馬遜交織的旅程畫下餘韻。</p>
 </div>
 </div>
@@ -311,7 +336,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 <section class="pe55-highlights pe55-ff" id="pe55-anchor-2" aria-labelledby="pe55-highlights-h">
 <div class="pe55-highlights-card">
 <div class="pe55-highlights-inner pe55-highlights-split">
-<div class="pe55-hl-col pe55-hl-col--viz">
+<div class="pe55-hl-col--viz">
 <div class="pe55-hl-mosaic" aria-hidden="true">
 <div class="pe55-hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_3117528.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"/></div>
 <div class="pe55-hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_1299479194.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"/></div>
@@ -322,7 +347,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 </div>
 </div>
 <h2 id="pe55-highlights-h" class="pe55-highlights-title"><span class="pe55-highlights-zh">精采豐富行程設計</span><span class="pe55-highlights-es" lang="es">Un itinerario enriquecedor y completo</span></h2>
-<div class="pe55-hl-col pe55-hl-col--txt">
+<div class="pe55-hl-col--txt">
 <ol class="pe55-hl-list">
 <li class="pe55-hl-item"><p class="pe55-hl-h">旅遊時間最多</p><p class="pe55-hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
 <li class="pe55-hl-item"><p class="pe55-hl-h">體驗精選飯店</p><p class="pe55-hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
@@ -338,7 +363,6 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 <!-- [SCREEN-ELEVATION START] 合併圖一張（標題與圖表皆在圖檔） -->
 <section class="pe55-elev pe55-ff" id="pe55-anchor-elev" aria-label="海拔圖：含秘魯景點海拔變化示意。實際高度與路線以出團說明與領隊現場安排為準。">
 <div class="pe55-elev-layout">
-<div class="pe55-elev-totem" aria-hidden="true"><div class="pe55-elev-totem-inner"><img class="pe55-elev-totem-img" src="https://www.tcawg.com/data/images/202604/Peru/423.png" alt="" width="640" height="640" decoding="async" loading="lazy"/></div></div>
 <div class="pe55-elev-bleed">
 <figure class="pe55-elev-fig">
 <img class="pe55-elev-img" src="https://www.tcawg.com/data/images/202604/Peru/%E6%B5%B7%E6%8B%94.png" alt="海拔圖（Perfil de altitud）：秘魯景點海拔折線圖與各日標示；以下為示意，實際高度與路線以出團說明與領隊現場安排為準。" width="2400" height="2800" decoding="async" loading="lazy"/>
@@ -347,6 +371,8 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 </div>
 </section>
 <!-- [SCREEN-ELEVATION END] -->
+<!-- [SCREEN-ELEV-AMAZON-DIVIDER] 海拔圖與亞馬遜主視覺之間 -->
+<div class="pe55-elev-amazon-div" role="presentation" aria-hidden="true"></div>
 <section class="pe55-grp pe55-grp-a" id="pe55-anchor-3" aria-labelledby="pe55-g1-h">
 <div class="pe55-a-hero-stack">
 <div class="pe55-a-hero">
@@ -363,42 +389,55 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 </div>
 <div class="pe55-bento pe55-bento--a-gallery">
 <div class="pe55-a-grid-txt">
-<h3 class="pe55-a-grid-title">雨林探索與生態實景</h3>
+<h3 class="pe55-a-grid-sub">雨林探索與生態實景</h3>
 <p>世界七大自然景觀，漫步雨林，感受原始氣息，體驗亞馬遜河蟲鳴。</p>
 <p>認識當地生態及夜間動物習性，深入了解這世界第一大雨林的魅力。</p>
+<h4 class="pe55-a-grid-sub">住宿2晚 雨林旅館</h4>
+<p>最新建造旅館之一，房間特色是只有三面牆，床直接面對原始森林，成為一個開放式觀景台，讓您休閒之餘可以盡情享受亞馬遜雨林世界。</p>
+<h4 class="pe55-a-grid-sub">釣食人魚體驗</h4>
+<p>深入叢林感受原始生活，更能體驗釣食人魚的有趣活動</p>
 </div>
-<figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜熱帶雨林" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Selva Amazónica · 熱帶雨林</figcaption></figure>
-<figure class="pe55-fig pe55-fig-t"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜雨林林冠與霧氣" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">雨林林冠</figcaption></figure>
+<figure class="pe55-fig pe55-fig-h"><img src="https://www.tcawg.com/data/images/202604/Peru/0149.jpg" alt="亞馬遜熱帶雨林" width="960" height="640" decoding="async" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Selva Amazónica · 熱帶雨林</figcaption></figure>
+<figure class="pe55-fig pe55-fig-t"><img src="https://www.tcawg.com/data/images/202604/Peru/0226.jpg" alt="原始森林" width="960" height="640" decoding="async" loading="lazy"/><figcaption class="pe55-cap">原始森林</figcaption></figure>
 <div class="pe55-film-wrap">
 <div class="pe55-film">
-<figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜河域" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">河域與霧林</figcaption></figure>
-<figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜雨林生態" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">叢林生態</figcaption></figure>
-<figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜雨林小徑" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">林間小徑</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/0229.jpg" alt="釣食人魚體驗" width="960" height="640" decoding="async" loading="lazy"/><figcaption class="pe55-cap">釣食人魚</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/02520.png" alt="雨林旅館" width="960" height="640" decoding="async" loading="lazy"/><figcaption class="pe55-cap">雨林旅館</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/0309.png" alt="雨林旅館（步道）" width="960" height="640" decoding="async" loading="lazy"/><figcaption class="pe55-cap">雨林旅館（步道）</figcaption></figure>
 </div>
 </div>
 </div>
 </section>
 <section class="pe55-grp pe55-grp-b" id="pe55-anchor-4" aria-labelledby="pe55-g2-h">
-<header class="pe55-ch pe55-ff">
-<span class="pe55-ch-num" aria-hidden="true">02</span>
+<div class="pe55-b-hero-stack">
+<div class="pe55-hero3">
+<img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_427758388.jpg" alt="馬丘比丘與印加山景（天空之城）" decoding="async" loading="lazy"/>
+<div class="pe55-hero3-scrim" aria-hidden="true"></div>
+<header class="pe55-ch pe55-ff pe55-ch--on-a-hero">
+<span class="pe55-ch-num" aria-hidden="true">Ⅱ</span>
 <div class="pe55-ch-meta">
-<p class="pe55-ch-en">Amazon · Machu Picchu · Titicaca</p>
-<p class="pe55-ch-zh">雨林、天空之城與高原湖水</p>
+<p class="pe55-ch-en">Cusco · Machu Picchu · Titicaca</p>
+<p class="pe55-ch-zh" id="pe55-g2-h">探索 古印加帝國文明</p>
+<p class="pe55-hero3-note" lang="zh-Hant">天空之城</p>
 </div>
 </header>
-<div class="pe55-bento pe55-bento-m">
-<div class="pe55-bento-s">
-<div class="pe55-txt pe55-ff">
-<p class="pe55-k">Del silencio al cielo</p>
-<h2 id="pe55-g2-h">雨林與高原的交會</h2>
-<p><strong>亞馬遜</strong>夜聲、<strong>馬丘比丘</strong>晨光、<strong>彩虹山</strong>礦物色帶與<strong>的的喀喀湖</strong>水上部落——以下多圖為素材占位，定稿請換貴社圖庫。</p>
 </div>
-<figure class="pe55-fig pe55-fig-t"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Amazon_rainforest.jpg/960px-Amazon_rainforest.jpg" alt="亞馬遜雨林" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">亞馬遜熱帶雨林</figcaption></figure>
 </div>
+<div class="pe55-bento pe55-bento--a-gallery">
 <figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/960px-Machu_Picchu%2C_Peru.jpg" alt="馬丘比丘" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Machu Picchu · 天空之城</figcaption></figure>
+<figure class="pe55-fig pe55-fig-t"><img src="https://www.tcawg.com/data/images/202604/Peru/0510.jpg" alt="納斯卡線地景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">納斯卡線</figcaption></figure>
+<div class="pe55-a-grid-txt">
+<h3 class="pe55-a-grid-sub">璀璨數千年的古印加文明</h3>
+<p>奇詭奧妙的圖騰、文化和鬼斧神工般的建築遺跡。</p>
+<p>其中還蘊藏了不少至今仍讓科學家、考古學家百思不得其解的謎。</p>
+<h4 class="pe55-a-grid-sub">圖騰、建築與神秘的納茲卡線</h4>
+<p>奇詭奧妙的圖騰、文化和鬼斧神工般的建築遺跡，其中還蘊藏了不少至今仍讓科學家、考古學家百思不得其解的謎。</p>
+<h4 class="pe55-a-grid-sub">神秘氛圍與嘆為觀止</h4>
+<p>這個神奇的地方，四周圍繞的神秘感，會讓所有仰望它的人對它的俊美嘆為觀止！</p>
+</div>
 <div class="pe55-film-wrap">
 <div class="pe55-film">
-<figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vinicunca%2C_Peru.jpg/960px-Vinicunca%2C_Peru.jpg" alt="彩虹山" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">彩虹山</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/0529.jpg" alt="全景觀光列車車廂與山景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">全景觀光列車</figcaption></figure>
 <figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Uros_islands%2C_Lake_Titicaca_01.jpg/960px-Uros_islands%2C_Lake_Titicaca_01.jpg" alt="的的喀喀湖蘆葦浮島" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">的的喀喀湖・蘆葦浮島</figcaption></figure>
 <figure class="pe55-fig pe55-fig-s"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Lima_Miraflores%2C_Peru.jpg/960px-Lima_Miraflores%2C_Peru.jpg" alt="米拉弗洛雷斯" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap">米拉弗洛雷斯區</figcaption></figure>
 </div>
@@ -418,19 +457,6 @@ var io=new IntersectionObserver(function(entries){
 entries.forEach(function(e){if(e.isIntersecting){reveal();io.disconnect();}});
 },{threshold:0.18,rootMargin:"0px 0px -6% 0px"});
 io.observe(h);
-})();
-(function(){
-var r=document.getElementById("pe55-root");
-if(!r)return;
-var s=r.querySelector("#pe55-anchor-2");
-if(!s)return;
-function revealHl(){r.classList.add("pe55-highlights-revealed");}
-if(typeof window.matchMedia==="function"&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){revealHl();return;}
-if(!("IntersectionObserver"in window)){revealHl();return;}
-var ioh=new IntersectionObserver(function(entries){
-entries.forEach(function(e){if(e.isIntersecting){revealHl();ioh.disconnect();}});
-},{threshold:0.14,rootMargin:"0px 0px -10% 0px"});
-ioh.observe(s);
 })();
 (function(){
 var th=document.getElementById("pe55-highlights-h");
