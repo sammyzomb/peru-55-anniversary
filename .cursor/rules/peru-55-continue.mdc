@@ -31,7 +31,7 @@ alwaysApply: true
 
 請**先確認**再執行還原：
 
-1. **一併提出**：是否要還原到 **`貼官網用/行程特色_安全版_RULES.md`** 第一節鎖定的**目前正常基線標籤**所指向之 `行程特色_貼上版.html`／`行程特色_開發版.html`？（若該專案尚未建立第一個標籤，應說明並改以 `git log`／指定 commit 處理。）
+1. **一併提出**：是否要還原到 **`貼官網用/行程特色_安全版_RULES.md`** 第一節鎖定的**目前正常基線標籤**（**`pe55-feature-baseline-202604201200`**）所指向之 `行程特色_貼上版.html`／`行程特色_開發版.html`？（若要更舊版本，改以 `git log`／指定 commit／舊標籤處理。）
 2. 若使用者**不是**要這一版，**問清再** `git checkout`。
 3. 預設語意：**「上一版正常」＝RULES 表格中的目前基準標籤**。
 
@@ -51,4 +51,4 @@ alwaysApply: true
 2. 註冊：`powershell -ExecutionPolicy Bypass -File .\scripts\Register-BaselineReminderTask.ps1`（工作名稱：`Peru55-BaselineHourlyReminder`）
 3. 解除：`powershell -ExecutionPolicy Bypass -File .\scripts\Unregister-BaselineReminderTask.ps1`
 
-若要鎖定基準版，依 `貼官網用/行程特色_安全版_RULES.md` 建立 Git 標籤（建議 `pe55-feature-baseline-YYYYMMDDhhmm`）並更新文件。
+若要鎖定**新**基準版，依 `貼官網用/行程特色_安全版_RULES.md` 建立 Git 標籤（建議 `pe55-feature-baseline-YYYYMMDDhhmm`）並更新文件。目前程式基線標籤：**`pe55-feature-baseline-202604201200`**。
