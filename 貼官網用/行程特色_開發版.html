@@ -22,9 +22,7 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-hero-inner{position:relative;z-index:3;max-width:min(44rem,94vw);margin:clamp(1rem,3vw,2rem) 0 0 clamp(1rem,4vw,3.5rem);padding:clamp(.35rem,1vw,.65rem) clamp(.25rem,1vw,.5rem) 0 0;text-align:left;background:none;border:none;box-shadow:none;overflow:visible}
 #pe55-root .pe55-hero-copy{min-width:0}
 #pe55-root .pe55-hero-logo-wrap{width:fit-content;max-width:100%;margin:0 0 clamp(.35rem,1.2vw,.55rem);padding:0;background:none;border:none;box-shadow:none;animation:none}
-#pe55-root .pe55-hero-logo{display:block;width:clamp(71px,23.2vw,128px);height:auto;opacity:0;animation:none;transform:scale(0.94);filter:drop-shadow(0 2px 12px rgba(0,0,0,.5)) drop-shadow(0 0 2px rgba(0,0,0,.35))}
-#pe55-root.pe55-hero-revealed .pe55-hero-logo{animation:pe55-hero-logo-in 1.15s cubic-bezier(.19,.92,.35,1) .52s forwards}
-#pe55-root.pe55-hero-revealed .pe55-hero-logo-wrap{animation:pe55-hero-logo-float 7.5s ease-in-out 1.85s infinite}
+#pe55-root .pe55-hero-logo{display:block;width:clamp(71px,23.2vw,128px);height:auto;opacity:1;animation:none;transform:none;filter:drop-shadow(0 2px 12px rgba(0,0,0,.5)) drop-shadow(0 0 2px rgba(0,0,0,.35))}
 @media (min-width:900px){
 #pe55-root .pe55-hero-logo{width:clamp(80px,10.4vw,120px)}
 }
@@ -163,8 +161,6 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-t{grid-column:2;grid-row:1;min-height:clamp(180px,30vw,360px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 8px 28px rgba(0,0,0,.25)}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film-wrap{grid-column:1/-1;grid-row:2;margin:0;gap:clamp(14px,1.5vw,20px)}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film{gap:clamp(14px,1.5vw,20px)}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film--single{grid-template-columns:1fr;width:100%}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film--single .pe55-fig-s{min-height:clamp(200px,28vw,360px)}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s{min-height:clamp(175px,32vw,300px);align-self:stretch;height:100%;border-radius:clamp(12px,1.3vw,20px);overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.22)}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig{background:#e3d8cf}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-cap-v{writing-mode:horizontal-tb;max-width:none;top:auto;bottom:0;left:0;right:auto;width:auto;padding:.42rem .62rem;letter-spacing:.08em;font-size:clamp(.65rem,.82vw,.74rem);background:linear-gradient(to top,rgba(0,0,0,.55),transparent);border-radius:0}
@@ -181,16 +177,10 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root .pe55-bento--a-gallery .pe55-fig img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:none!important;object-fit:cover!important;box-sizing:border-box!important}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-t img{object-fit:contain!important;object-position:50% 50%!important}
 #pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s--moray img{object-position:50% 50%!important}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-film--single .pe55-fig-s.pe55-fig-s--nazca-strip{display:flex;flex-direction:column;align-self:stretch;width:100%;min-height:0!important;height:auto;overflow:hidden}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s--nazca-strip img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;min-height:0!important;display:block;object-fit:initial!important;object-position:50% 50%!important;vertical-align:top}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s--nazca-strip .pe55-cap{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;margin:0;flex-shrink:0}
-#pe55-root .pe55-grp-b > .pe55-bento--a-gallery .pe55-fig-s--nazca-strip:hover img{transform:none}
 #pe55-root .pe55-fig:hover img{transform:scale(1.04)}
 #pe55-root .pe55-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.45rem .65rem .5rem .85rem;font-size:clamp(.68rem,.95vw,.8rem);font-weight:600;letter-spacing:.1em;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.4);background:linear-gradient(to top,rgba(30,28,26,.88),transparent)}
 #pe55-root .pe55-cap-v{left:0;right:auto;top:0;bottom:0;max-width:42%;width:auto;padding:.75rem .4rem;writing-mode:vertical-rl;text-orientation:mixed;letter-spacing:.18em;font-size:.72rem;background:linear-gradient(90deg,rgba(30,28,26,.82),transparent)}
 #pe55-root .pe55-grp-a > .pe55-bento--a-gallery .pe55-fig-h .pe55-cap{border-radius:0 0 clamp(12px,1.3vw,20px) clamp(12px,1.3vw,20px)}
-@keyframes pe55-hero-logo-in{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
-@keyframes pe55-hero-logo-float{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-5px,0)}}
 @keyframes pe55-hero-bg-zoom{from{transform:scale(1)}to{transform:scale(1.1)}}
 @keyframes pe55-hero-in{from{opacity:0;transform:translate3d(0,clamp(14px,2.4vh,32px),0)}to{opacity:1;transform:translate3d(0,0,0)}}
 @keyframes pe55-hero-title-drama{0%{opacity:0;transform:translate3d(0,clamp(14px,2.4vh,32px),0) scale(.9);animation-timing-function:cubic-bezier(.22,.61,.16,1)}24%{opacity:1;transform:translate3d(0,0,0) scale(1.72);animation-timing-function:cubic-bezier(.15,.94,.3,1)}100%{opacity:1;transform:translate3d(0,0,0) scale(1)}}
@@ -215,10 +205,6 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 #pe55-root.pe55-hero-revealed .pe55-hero-sub-flip-inner{transform:none!important}
 #pe55-root .pe55-hero-sub-face{position:relative!important;transform:none!important;backface-visibility:visible!important;-webkit-backface-visibility:visible!important}
 #pe55-root .pe55-hero-sub-face-b{display:none!important}
-#pe55-root .pe55-hero-logo-wrap{animation:none!important}
-#pe55-root.pe55-hero-revealed .pe55-hero-logo-wrap{transform:none!important}
-#pe55-root .pe55-hero-logo{animation:none!important;transform:none!important}
-#pe55-root.pe55-hero-revealed .pe55-hero-logo{opacity:1!important;transform:none!important}
 #pe55-root .pe55-hl-mosaic .pe55-hl-cell img{animation:none!important;opacity:1!important;transform:none!important}
 #pe55-root .pe55-highlights-title{opacity:1!important;transform:none!important;animation:none!important}
 #pe55-root .pe55-highlights-es{transform:none!important}
@@ -428,21 +414,20 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 <section class="pe55-grp pe55-grp-b" id="pe55-anchor-4" aria-labelledby="pe55-g2-h">
 <div class="pe55-b-hero-stack">
 <div class="pe55-hero3">
-<img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_427758388.jpg" alt="馬丘比丘與印加山景（天空之城）" decoding="async" loading="lazy"/>
+<img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_427758388.jpg" alt="馬丘比丘與印加山景" decoding="async" loading="lazy"/>
 <div class="pe55-hero3-scrim" aria-hidden="true"></div>
 <header class="pe55-ch pe55-ff pe55-ch--on-a-hero">
 <span class="pe55-ch-num" aria-hidden="true">Ⅱ</span>
 <div class="pe55-ch-meta">
 <p class="pe55-ch-en">Cusco · Machu Picchu · Titicaca</p>
 <p class="pe55-ch-zh" id="pe55-g2-h">探索 古印加帝國文明</p>
-<p class="pe55-hero3-note" lang="zh-Hant">天空之城</p>
 </div>
 </header>
 </div>
 </div>
 <div class="pe55-bento pe55-bento--a-gallery">
-<figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/960px-Machu_Picchu%2C_Peru.jpg" alt="馬丘比丘" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Machu Picchu · 天空之城</figcaption></figure>
-<figure class="pe55-fig pe55-fig-t"><img src="https://www.tcawg.com/data/images/202604/Peru/0510.jpg" alt="納斯卡線地景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">納斯卡線</figcaption></figure>
+<figure class="pe55-fig pe55-fig-h"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/960px-Machu_Picchu%2C_Peru.jpg" alt="馬丘比丘" width="960" height="640" loading="lazy"/><figcaption class="pe55-cap pe55-cap-v">Machu Picchu · 馬丘比丘</figcaption></figure>
+<figure class="pe55-fig pe55-fig-t"><img src="https://www.tcawg.com/data/images/202604/Peru/0230.jpg" alt="納斯卡線地景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">納斯卡線</figcaption></figure>
 <div class="pe55-a-grid-txt">
 <h3 class="pe55-a-grid-sub">璀璨數千年的古印加文明</h3>
 <p>奇詭奧妙的圖騰、文化和鬼斧神工般的建築遺跡。</p>
@@ -452,14 +437,11 @@ background-image:linear-gradient(178deg,#faf9f6 0%,#f4f1eb 38%,#ebe6df 72%,#e3de
 <h4 class="pe55-a-grid-sub">神秘氛圍與嘆為觀止</h4>
 <p>這個神奇的地方，四周圍繞的神秘感，會讓所有仰望它的人對它的俊美嘆為觀止！</p>
 </div>
-<div class="pe55-film-wrap">
+<div class="pe55-film-wrap" id="pe55-anchor-hero4">
 <div class="pe55-film">
-<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/0529.jpg" alt="全景觀光列車車廂與山景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">全景觀光列車</figcaption></figure>
-<figure class="pe55-fig pe55-fig-s pe55-fig-s--moray"><img src="https://www.tcawg.com/data/images/202604/Peru/0848.JPG" alt="聖谷莫雷梯田環形梯田" decoding="async" loading="lazy"/><figcaption class="pe55-cap">聖谷/莫雷梯田</figcaption></figure>
-<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/cusco_inti%20raymi19.JPG" alt="太陽神祭典（印加太陽節）庫斯科薩克塞瓦曼" decoding="async" loading="lazy"/><figcaption class="pe55-cap">太陽神祭典</figcaption></figure>
-</div>
-<div class="pe55-film pe55-film--single" id="pe55-anchor-hero4">
-<figure class="pe55-fig pe55-fig-s pe55-fig-s--nazca-strip"><img src="https://www.tcawg.com/data/images/202604/Peru/%E7%A5%95%E9%9C%8714_12_0905.jpg" alt="納斯卡線地景" decoding="async" loading="lazy"/><figcaption class="pe55-cap">納斯卡線</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/0529.jpg" alt="全景觀光列車" decoding="async" loading="lazy"/><figcaption class="pe55-cap">全景觀光列車</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s pe55-fig-s--moray"><img src="https://www.tcawg.com/data/images/202604/Peru/0222.JPG" alt="聖谷／莫雷環形梯田" decoding="async" loading="lazy"/><figcaption class="pe55-cap">聖谷/莫雷梯田</figcaption></figure>
+<figure class="pe55-fig pe55-fig-s"><img src="https://www.tcawg.com/data/images/202604/Peru/cusco_inti%20raymi19.JPG" alt="太陽神祭典（印加太陽節，庫斯科）" decoding="async" loading="lazy"/><figcaption class="pe55-cap">太陽神祭典</figcaption></figure>
 </div>
 </div>
 </div>
