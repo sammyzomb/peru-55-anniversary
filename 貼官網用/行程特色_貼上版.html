@@ -1,5 +1,5 @@
 <div id="pe55-cms-safe-root"><style type="text/css">
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Noto+Sans+TC:wght@700;900&family=Noto+Serif+TC:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@700;900&family=Noto+Serif+TC:ital,wght@0,400;0,600;1,400&display=swap");
 #pe55-cms-safe-root{position:relative;isolation:isolate;width:auto;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);box-sizing:border-box;overflow-x:hidden}
 #pe55-root,#pe55-root *{box-sizing:border-box}
 #pe55-root{--g:#b8942a;--bg:#efeae3;--tx:#2a2622;--tx2:#575045;--r:clamp(10px,1.1vw,15px);--gap:clamp(14px,1.5vw,20px);--pad:clamp(1rem,4vw,3.5rem);--shadow:0 8px 28px rgba(0,0,0,.25);width:100%;margin:0;padding:0;color:var(--tx);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:linear-gradient(178deg,#faf9f6 0,#f4f1eb 38%,#ebe6df 72%,#e3ded6 100%)}
@@ -11,7 +11,7 @@
 #pe55-root .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;z-index:2;pointer-events:none;height:clamp(56px,11vh,140px);background:linear-gradient(to bottom,rgba(250,249,246,0) 0,rgba(250,249,246,0) 40%,rgba(244,241,235,.5) 66%,rgba(235,230,223,.88) 86%,#efeae3 100%)}
 #pe55-root .hero-media,#pe55-root .panel-hero-media{position:absolute;inset:0;overflow:hidden;background:#2a2624}
 #pe55-root .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 100%;transform-origin:50% 88%;filter:brightness(1.12) saturate(1.05)}
-#pe55-root.is-ready .hero.is-in .hero-media img{animation:pe55-bg-zoom 18s cubic-bezier(.2,.06,.12,1) forwards}
+#pe55-root.is-ready .hero.is-in .hero-media img{animation:pe55-bg-zoom 18s cubic-bezier(.2,.06,.12,1) infinite}
 #pe55-root .hero-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(120% 85% at 24% 34%,rgba(20,16,12,0) 0,rgba(20,16,12,.06) 52%,rgba(20,16,12,.16) 100%),linear-gradient(112deg,rgba(18,14,10,.12) 0,rgba(18,14,10,.04) 38%,rgba(18,14,10,.14) 100%)}
 #pe55-root .hero-inner{position:relative;z-index:3;max-width:min(44rem,94vw);margin:clamp(1rem,3vw,2rem) 0 0 clamp(1rem,4vw,3.5rem);padding:clamp(.35rem,1vw,.65rem) clamp(.25rem,1vw,.5rem) 0 0}
 #pe55-root .hero-logo{width:clamp(71px,23.2vw,128px);height:auto;filter:drop-shadow(0 2px 12px rgba(0,0,0,.5)) drop-shadow(0 0 2px rgba(0,0,0,.35))}
@@ -68,6 +68,31 @@
 #pe55-root .hl-list .hl-sub+.hl-sub{margin-top:.45rem}
 #pe55-root .hl-list .hl-totem{position:relative;z-index:3;margin:clamp(.5rem,1.2vw,.85rem) clamp(-.9rem,-2.2vw,-.25rem) clamp(-.35rem,-.9vw,-.2rem) 0;display:flex;justify-content:center;pointer-events:none}
 #pe55-root .hl-list .hl-totem img{display:block;width:clamp(220px,28vw,380px);height:auto;opacity:.14;animation:pe55-spin 220s linear infinite}
+
+/* ===== 亮點清單高端精品風格改進 ===== */
+#pe55-root .hl-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(320px,28vw,380px),1fr));gap:clamp(2rem,3vw,2.5rem);margin-top:clamp(2rem,4vw,3rem)}
+#pe55-root .hl-card{position:relative;background:linear-gradient(145deg,#ffffff 0%,#fafafa 50%,#f5f5f5 100%);border-radius:clamp(16px,2vw,24px);box-shadow:0 8px 32px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04),inset 0 1px 0 rgba(255,255,255,.8);overflow:hidden;border:1px solid rgba(184,148,42,.15);transition:all .4s cubic-bezier(.25,.46,.45,.94);backdrop-filter:blur(10px)}
+#pe55-root .hl-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,.12),0 12px 32px rgba(0,0,0,.08),inset 0 1px 0 rgba(255,255,255,.9);border-color:rgba(184,148,42,.25)}
+#pe55-root .hl-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(184,148,42,.03) 0%,rgba(184,148,42,.08) 50%,rgba(184,148,42,.03) 100%);pointer-events:none;opacity:0;transition:opacity .4s ease}
+#pe55-root .hl-card:hover::before{opacity:1}
+#pe55-root .hl-card::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid rgba(184,148,42,.1);border-radius:inherit;pointer-events:none}
+
+/* 高端質感裝飾元素 */
+#pe55-root .hl-card-decoration{position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#b8942a 0%,#d4af37 30%,#f4e87c 50%,#d4af37 70%,#b8942a 100%);border-radius:16px 16px 0 0}
+#pe55-root .hl-card-glow{position:absolute;inset:-2px;background:linear-gradient(45deg,#b8942a,#d4af37,#f4e87c,#d4af37,#b8942a);border-radius:inherit;opacity:0;filter:blur(8px);transition:opacity .4s ease;z-index:-1}
+#pe55-root .hl-card:hover .hl-card-glow{opacity:.3}
+
+#pe55-root .hl-card-icon{position:absolute;top:clamp(1.2rem,2vw,1.5rem);right:clamp(1.2rem,2vw,1.5rem);width:clamp(48px,5vw,60px);height:clamp(48px,5vw,60px);background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 50%,#1a1a1a 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d4af37;font-size:clamp(1.4rem,2.5vw,1.8rem);box-shadow:inset 0 2px 4px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.2);border:2px solid #d4af37;z-index:3}
+#pe55-root .hl-card-content{padding:clamp(2.5rem,4vw,3.5rem) clamp(2rem,3vw,2.5rem) clamp(2rem,3vw,2.5rem);position:relative;z-index:2}
+#pe55-root .hl-card-number{position:absolute;top:clamp(.8rem,1.5vw,1rem);left:clamp(1.2rem,2vw,1.5rem);font:300 clamp(3.5rem,6vw,5rem)/1 'Times New Roman',serif;color:rgba(184,148,42,.08);z-index:1;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(184,148,42,.1)}
+#pe55-root .hl-card-title{margin:0 0 .8rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:600;letter-spacing:.02em;line-height:1.2;color:#1a1a1a;text-transform:uppercase}
+#pe55-root .hl-card-desc{margin:0;font-family:'Noto Serif TC',serif;font-size:clamp(1rem,1.4vw,1.1rem);line-height:1.7;color:#4a4a4a;font-style:italic}
+#pe55-root .hl-card-desc+.hl-card-desc{margin-top:.6rem}
+
+/* 高端精品風格的特殊效果 */
+#pe55-root .hl-card-premium{position:relative}
+#pe55-root .hl-card-premium::before{content:'PREMIUM';position:absolute;top:clamp(.6rem,1vw,.8rem);right:clamp(1.2rem,2vw,1.5rem);font:700 clamp(.7rem,1vw,.8rem)/1 'Arial',sans-serif;color:#d4af37;text-transform:uppercase;letter-spacing:.1em;background:#1a1a1a;padding:.2rem .6rem;border-radius:10px;z-index:4}
+
 #pe55-root .elev{padding:0 0 clamp(.25rem,.55vw,.45rem);background:#faf7f2}
 #pe55-root .elev-wrap{max-width:min(90rem,99vw);margin:0 auto;padding:0 clamp(.25rem,1.2vw,.65rem)}
 #pe55-root .elev-fig{position:relative;overflow:hidden;background:#f4f1eb}
@@ -76,10 +101,14 @@
 #pe55-root .story.is-a{background:linear-gradient(165deg,#e6edf5 0,#eef3f9 42%,#ebe8e2 100%)}
 #pe55-root .story.is-b{background:linear-gradient(165deg,#efe4dc 0,#faf4ef 44%,#ebe5df 100%)}
 #pe55-root .story.is-c{background:linear-gradient(165deg,#e8ecf6 0,#f4f6fb 46%,#ebe5df 100%)}
-#pe55-root .story.is-d{background:linear-gradient(165deg,#e9efe8 0,#f5f8f1 44%,#ebe5df 100%)}
+#pe55-root .story.is-d{background:linear-gradient(165deg,#e9efe8 0,#f5f8f1 44%,#ebe5df 100%);padding-bottom:clamp(1.1rem,2.2vw,1.8rem)}
 #pe55-root .story.is-e{background:linear-gradient(165deg,#ebe8f0 0,#f6f3fa 44%,#ebe5df 100%)}
+#pe55-root .story.is-e .panel-hero{min-height:auto;background:linear-gradient(165deg,#ebe8f0 0,#f6f3fa 44%,#ebe5df 100%)}
+#pe55-root .story.is-e .panel-hero-media{position:relative;display:grid;grid-template-columns:repeat(2,1fr);justify-items:stretch;align-items:stretch;gap:var(--gap);padding:clamp(1rem,2vw,1.5rem) var(--pad) clamp(1rem,2vw,1.5rem);z-index:1;width:100%;background:linear-gradient(165deg,#ebe8f0 0,#f6f3fa 44%,#ebe5df 100%)}
+#pe55-root .story.is-e .panel-hero .panel-hero-media img{position:relative;inset:auto;width:100%;height:100%;min-height:clamp(200px,25vw,280px);object-fit:cover;object-position:50% 50%;transform:none;filter:saturate(1.04) brightness(1.01) contrast(1.01);border-radius:clamp(10px,1.2vw,16px);justify-self:stretch;align-self:stretch}
+#pe55-root .story.is-e .panel-scrim{display:none}
 #pe55-root .story.is-b{padding-bottom:clamp(1.6rem,3.5vw,2.6rem)}
-#pe55-root .story.is-c{padding-top:0}
+#pe55-root .story.is-c{padding-top:0;padding-bottom:clamp(.55rem,1.2vw,.95rem)}
 #pe55-root .panel-hero{position:relative;min-height:min(min(1680px,98vh),max(640px,calc(72vh + 30vw)));overflow:hidden}
 #pe55-root .story.is-a .panel-hero{background:linear-gradient(165deg,#e6edf5 0,#eef3f9 42%,#ebe8e2 100%);min-height:auto}
 #pe55-root .story:not(.is-a) .panel-hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:translateZ(0);filter:saturate(1.12) brightness(1.04) contrast(1.02)}
@@ -92,6 +121,10 @@
 #pe55-root .story.is-a .panel-scrim{background:linear-gradient(180deg,rgba(0,0,0,.52) 0,rgba(0,0,0,.28) 16%,rgba(0,0,0,0) 38%,rgba(0,0,0,0) 68%,rgba(250,247,242,.45) 84%,rgba(250,247,242,.88) 94%,#faf7f2 100%)}
 #pe55-root .story.is-b .panel-scrim{background:linear-gradient(180deg,rgba(25,70,120,.12) 0,rgba(20,55,95,.05) 9%,transparent 26%,transparent 100%)}
 #pe55-root .story.is-c .panel-scrim{background:linear-gradient(180deg,rgba(20,70,110,.14) 0,rgba(20,55,95,.06) 10%,transparent 28%,transparent 100%)}
+#pe55-root .story.is-d .panel-hero{min-height:auto}
+#pe55-root .story.is-d .panel-hero-media{position:relative;inset:auto;background:transparent}
+#pe55-root .story.is-d .panel-hero-media img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;object-position:50% 50%;transform:none;filter:saturate(1.04) brightness(1.02) contrast(1.01)}
+#pe55-root .story.is-d .chapter-no{color:rgba(108,72,24,.92);text-shadow:0 1px 0 rgba(255,255,255,.28),0 2px 10px rgba(0,0,0,.42),0 0 18px rgba(0,0,0,.18)}
 #pe55-root .chapter{position:absolute;left:0;right:0;top:0;z-index:2;margin:0;padding:clamp(.85rem,2.2vw,1.55rem) var(--pad) clamp(.65rem,1.8vw,1.1rem);display:grid;grid-template-columns:auto 1fr;gap:.45rem .95rem;align-items:start}
 #pe55-root .chapter-no{grid-row:1/3;font-size:clamp(4.5rem,16.5vw,7.65rem);font-weight:200;line-height:.82;letter-spacing:-.03em;color:rgba(184,148,42,.28);text-shadow:0 1px 0 rgba(255,255,255,.5),0 2px 12px rgba(0,0,0,.35)}
 #pe55-root .chapter-meta{padding-bottom:.35rem}
@@ -100,9 +133,16 @@
 #pe55-root .story-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.28fr) minmax(0,.8fr);gap:var(--gap);padding:clamp(1.35rem,2.8vw,2.5rem) var(--pad);align-items:start}
 #pe55-root .story.is-a .story-grid{background:linear-gradient(165deg,#e6edf5 0,#eef3f9 42%,#ebe8e2 100%)}
 #pe55-root .story.is-b .story-grid{background:linear-gradient(165deg,#ebe5df 0,#faf4ef 42%,#efe8e0 100%)}
-#pe55-root .story.is-c .story-grid{background:linear-gradient(165deg,#ebe5df 0,#faf4ef 42%,#efe8e0 100%)}
+#pe55-root .story.is-c .story-grid{background:linear-gradient(165deg,#ebe5df 0,#faf4ef 42%,#efe8e0 100%);grid-template-columns:1.2fr 1.08fr 1.12fr}
 #pe55-root .story.is-d .story-grid{background:linear-gradient(165deg,#ece8df 0,#f8f6ef 42%,#efe8e0 100%)}
-#pe55-root .story.is-e .story-grid{background:linear-gradient(165deg,#ece8df 0,#f7f3fa 42%,#efe8e0 100%)}
+#pe55-root .story.is-d .fig-main{grid-column:1;grid-row:1;position:relative;z-index:2}
+#pe55-root .story.is-d .fig-side{grid-column:2;grid-row:1;position:relative;z-index:2}
+#pe55-root .story.is-d .story-text{grid-column:3;grid-row:1;padding-left:clamp(.25rem,.8vw,.5rem);position:relative;z-index:2}
+#pe55-root .story.is-d .story-film{grid-column:1/-1;grid-row:3;grid-template-columns:repeat(3,minmax(0,1fr));position:relative;z-index:3;margin-top:clamp(-2.25rem,-3.4vw,-1.25rem)}
+#pe55-root .story.is-d .story-inca-band{grid-column:1/-1;grid-row:2;position:relative;height:clamp(58px,10vw,132px);margin:clamp(-.65rem,-1.2vw,-.25rem) 0 clamp(-2.4rem,-4.2vw,-1.35rem);pointer-events:none;z-index:0}
+#pe55-root .story.is-d .story-inca-band::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:linear-gradient(to right,rgba(120,88,42,0) 0,rgba(120,88,42,.28) 20%,rgba(120,88,42,.28) 80%,rgba(120,88,42,0) 100%)}
+#pe55-root .story.is-d .story-inca-band::after{content:"";position:absolute;left:50%;top:52%;width:clamp(230px,36vw,460px);aspect-ratio:1/1;transform:translate(-50%,-50%);background:url("https://www.tcawg.com/data/images/202604/Peru/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-04-16%20153205.png") center/contain no-repeat;filter:saturate(.82) brightness(.9) contrast(.96);opacity:.1;animation:pe55-spin-center 260s linear infinite}
+#pe55-root .story.is-e .story-grid{background:linear-gradient(165deg,#ece8df 0,#f7f3fa 42%,#efe8e0 100%);grid-template-columns:1.2fr 1.08fr 1.12fr}
 #pe55-root .story-text{align-self:start}
 #pe55-root .story.is-a .story-text{grid-column:1;padding-right:clamp(.25rem,.8vw,.5rem)}
 #pe55-root .story.is-a .fig-main{grid-column:2}
@@ -110,9 +150,15 @@
 #pe55-root .story:not(.is-a) .fig-main{grid-column:1}
 #pe55-root .story:not(.is-a) .fig-side{grid-column:2}
 #pe55-root .story:not(.is-a) .story-text{grid-column:3;padding-left:clamp(.25rem,.8vw,.5rem)}
+#pe55-root .story.is-c .story-text{grid-column:1;grid-row:1;padding-right:clamp(.25rem,.8vw,.5rem);padding-left:0;align-self:start}
+#pe55-root .story.is-c .fig-main{grid-column:2;grid-row:1}
+#pe55-root .story.is-c .fig-side{grid-column:3;grid-row:1}
+#pe55-root .story.is-e .story-text{grid-column:1;grid-row:1;padding-right:clamp(.25rem,.8vw,.5rem);padding-left:0;align-self:start}
+#pe55-root .story.is-e .fig-main{grid-column:2;grid-row:1}
+#pe55-root .story.is-e .fig-side{grid-column:3;grid-row:1}
 #pe55-root .story-sub{margin:0 0 .32rem;font-size:clamp(1.08rem,1.72vw,1.38rem);font-weight:700;line-height:1.32;letter-spacing:.045em}
-#pe55-root .story.is-a .story-sub{color:#2a4a66}
-#pe55-root .story.is-b .story-sub,#pe55-root .story.is-c .story-sub,#pe55-root .story.is-d .story-sub,#pe55-root .story.is-e .story-sub{color:#6a4030}
+#pe55-root .story.is-a .story-sub,#pe55-root .story.is-c .story-sub,#pe55-root .story.is-e .story-sub{color:#2a4a66}
+#pe55-root .story.is-b .story-sub,#pe55-root .story.is-d .story-sub{color:#6a4030}
 #pe55-root .story-text p{margin:0 0 .88rem;font-size:clamp(.95rem,1.22vw,1.08rem);line-height:1.76;color:rgba(42,38,34,.82)}
 #pe55-root .story-text p:last-child{margin-bottom:0}
 #pe55-root .story-text .story-divider{height:1px;margin:clamp(.55rem,1.2vw,.85rem) 0 clamp(.7rem,1.4vw,1rem);background:linear-gradient(to right,rgba(184,148,42,.62) 0,rgba(184,148,42,.24) 40%,rgba(184,148,42,0) 85%)}
@@ -146,13 +192,25 @@
 @media (max-width:900px){#pe55-root .hero{min-height:clamp(380px,78vh,720px)}#pe55-root .hero-inner{margin:clamp(.75rem,3vw,1.15rem) clamp(.75rem,3vw,1.25rem) 0;max-width:100%}#pe55-root .story-grid,#pe55-root .story-film{grid-template-columns:1fr}#pe55-root .story-text,#pe55-root .fig-main,#pe55-root .fig-side,#pe55-root .story-film{grid-column:1!important}}
 @media (max-width:900px){#pe55-root .band{padding:0 clamp(1.25rem,6vw,2.2rem)}}
 @media (max-width:779px){#pe55-root .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));height:auto}#pe55-root .mosaic .hl-cell{aspect-ratio:16/9;height:auto}}
-@media (max-width:680px){#pe55-root .panel-hero{min-height:min(min(1280px,96vh),max(520px,calc(74vh + 38vw)))}#pe55-root .story.is-b .panel-hero-media img{object-position:50% 84%}#pe55-root .story.is-c .panel-hero-media img{object-position:50% 55%}}
+@media (max-width:900px){#pe55-root .story.is-e .panel-hero{min-height:auto}#pe55-root .story.is-e .panel-hero-media{grid-template-columns:1fr;padding:clamp(2rem,5vw,3rem) var(--pad) clamp(1rem,2vw,1.5rem)}#pe55-root .story.is-e .panel-hero .panel-hero-media img{height:clamp(120px,31vw,180px)}}
+
+/* 高端精品風格響應式調整 */
+@media (max-width:779px){
+#pe55-root .hl-cards{grid-template-columns:1fr;gap:clamp(1.5rem,2.5vw,2rem);margin-top:clamp(1.5rem,3vw,2rem)}
+#pe55-root .hl-card{max-width:100%;margin:0 auto;border-radius:clamp(12px,1.5vw,16px)}
+#pe55-root .hl-card-content{padding:clamp(2rem,3vw,2.5rem) clamp(1.5rem,2.5vw,2rem)}
+#pe55-root .hl-card-number{font-size:clamp(2.8rem,5vw,3.8rem)}
+#pe55-root .hl-card-icon{width:clamp(40px,4vw,48px);height:clamp(40px,4vw,48px);font-size:clamp(1.2rem,2vw,1.4rem)}
+}
+
+@media (max-width:680px){#pe55-root .panel-hero{min-height:min(min(1280px,96vh),max(520px,calc(74vh + 38vw)))}#pe55-root .story.is-b .panel-hero-media img{object-position:50% 84%}#pe55-root .story.is-c .panel-hero-media img{object-position:50% 55%}#pe55-root .story.is-d .panel-hero{min-height:auto}#pe55-root .story.is-d .panel-hero-media img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;object-position:50% 50%;transform:none}}
+@media (max-width:680px){#pe55-root .panel-hero{min-height:min(min(1280px,96vh),max(520px,calc(74vh + 38vw)))}#pe55-root .story.is-b .panel-hero-media img{object-position:50% 84%}#pe55-root .story.is-c .panel-hero-media img{object-position:50% 55%}#pe55-root .story.is-d .panel-hero{min-height:auto}#pe55-root .story.is-d .panel-hero-media img{position:relative;inset:auto;width:100%;height:auto;object-fit:contain;object-position:50% 50%;transform:none}}
 #pe55-root:not(.is-ready) .reveal-title,#pe55-root:not(.is-ready) .reveal-up,#pe55-root:not(.is-ready) .highlights-title{opacity:1!important;transform:none!important;filter:none!important}
 #pe55-root:not(.is-ready) .hero-sub-stack{display:flex;flex-direction:column;gap:.32em;height:auto;overflow:visible;perspective:none}
 #pe55-root:not(.is-ready) .hero-sub-line{position:static;white-space:normal;text-overflow:clip}
 @media (prefers-reduced-motion:reduce){#pe55-root *,#pe55-root *::before,#pe55-root *::after{animation:none!important;transition:none!important}#pe55-root .reveal-title,#pe55-root .reveal-up,#pe55-root .highlights-title{opacity:1!important;transform:none!important}#pe55-root .hero-sub-stack{display:flex;flex-direction:column;gap:.32em;height:auto;overflow:visible;perspective:none}#pe55-root .hero-sub-line{position:static;white-space:normal;text-overflow:clip}}
-@media (prefers-reduced-motion:no-preference){#pe55-root:not(.is-ready) .hero .hero-media img{animation:pe55-bg-zoom 18s cubic-bezier(.2,.06,.12,1) forwards}#pe55-root:not(.is-ready) .hero .hero-kicker{animation:pe55-in .95s cubic-bezier(.19,.92,.35,1) .08s forwards}#pe55-root:not(.is-ready) .hero .hero-title{animation:pe55-title-hero-smooth 1.15s cubic-bezier(.22,.64,.24,1) .18s forwards}}
-@keyframes pe55-bg-zoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+@media (prefers-reduced-motion:no-preference){#pe55-root:not(.is-ready) .hero .hero-media img{animation:pe55-bg-zoom 18s cubic-bezier(.2,.06,.12,1) infinite}#pe55-root:not(.is-ready) .hero .hero-kicker{animation:pe55-in .95s cubic-bezier(.19,.92,.35,1) .08s forwards}#pe55-root:not(.is-ready) .hero .hero-title{animation:pe55-title-hero-smooth 1.15s cubic-bezier(.22,.64,.24,1) .18s forwards}}
+@keyframes pe55-bg-zoom{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 @keyframes pe55-in{from{opacity:0;transform:translate3d(0,22px,0)}to{opacity:1;transform:none}}
 @keyframes pe55-title{0%{opacity:0;transform:translate3d(clamp(-3rem,-14vw,-.65rem),0,0);filter:blur(3px)}55%{opacity:1;filter:blur(0)}100%{opacity:1;transform:none;filter:none}}
 @keyframes pe55-title-hero-smooth{0%{opacity:0;transform:translate3d(clamp(-2.8rem,-12vw,-.6rem),0,0) scale(.97)}62%{opacity:1;transform:translate3d(0,0,0) scale(1.02)}100%{opacity:1;transform:translate3d(0,0,0) scale(1)}}
@@ -160,7 +218,7 @@
 @keyframes pe55-line{from{opacity:0;transform:translate3d(0,.22em,0)}to{opacity:1;transform:none}}
 @keyframes pe55-flip-a{0%,45%{opacity:1;transform:rotateX(0deg);filter:none}50%,95%{opacity:0;transform:rotateX(-88deg);filter:blur(1.3px)}100%{opacity:1;transform:rotateX(0deg);filter:none}}
 @keyframes pe55-flip-b{0%,45%{opacity:0;transform:rotateX(88deg);filter:blur(1.3px)}50%,95%{opacity:1;transform:rotateX(0deg);filter:none}100%{opacity:0;transform:rotateX(-88deg);filter:blur(1.3px)}}
-@keyframes pe55-spin{to{transform:rotate(360deg)}}
+@keyframes pe55-spin{to{transform:rotate(360deg)}}@keyframes pe55-spin-center{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
 @keyframes pe55-fadeup{from{opacity:0;transform:translateY(22%)}to{opacity:1;transform:none}}
 </style>
 <div id="pe55-root" lang="zh-Hant">
@@ -206,6 +264,67 @@
 <div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/1_ks5uF1PRVmRRslWTUb9r_w.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
 </div>
 <h2 id="pe55-highlights-h" class="highlights-title"><b>精采豐富行程設計</b><span lang="es">Un itinerario enriquecedor y completo</span></h2>
+
+<!-- 新的高端精品風格亮點清單 -->
+<div class="hl-cards" style="display:none;">
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">✈️</div>
+<div class="hl-card-number">1</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">尊榮航空體驗</h3>
+<p class="hl-card-desc">專屬長榮航空頭等艙服務，尊榮抵達入住利馬六星級飯店。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🏛️</div>
+<div class="hl-card-number">2</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">頂級住宿尊寵</h3>
+<p class="hl-card-desc">入住熱水鎮私人莊園，獨享馬丘比丘日出晨曦。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🌟</div>
+<div class="hl-card-number">3</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">傳奇雙島之旅</h3>
+<p class="hl-card-desc">的的喀喀湖雙島：烏魯族長蘆葦浮島、印加塔吉利島，世界遺產私密探索。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">👨‍🍳</div>
+<div class="hl-card-number">4</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">米其林星級美食</h3>
+<p class="hl-card-desc">秘魯傳統貴族料理：阿雅庫喬天竺鼠、皮烏拉港生魚，米其林主廚親炙。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🛩️</div>
+<div class="hl-card-number">5</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">私人專機服務</h3>
+<p class="hl-card-desc">南美洲最佳航空公司專機，連續六年獲獎，頂級機上管家服務。</p>
+<p class="hl-card-desc">享受全球最奢華的飛行體驗，讓旅程從起飛那一刻開始尊榮。</p>
+</div>
+</div>
+</div>
+
+<!-- 保留原有的清單作為備用 -->
 <ol class="hl-list">
 <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
 <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
@@ -308,8 +427,6 @@
 </header>
 </div>
 <div class="story-grid">
-<figure class="fig fig-main"><img src="https://www.tcawg.com/data/images/202604/Peru/%E7%9A%84%E7%9A%84%E5%96%80%E5%96%80%E6%B9%96shutterstock_1204846594.jpg" alt="的的喀喀湖" width="1200" height="800" decoding="async" loading="lazy"><figcaption class="cap-v">Lago Titicaca · 的的喀喀湖</figcaption></figure>
-<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/0410.jpg" alt="彩虹山（七色山）" width="1200" height="800" decoding="async" loading="lazy"><figcaption class="cap">Vinicunca · 彩虹山</figcaption></figure>
 <div class="story-text">
 <h3 class="story-sub">世界海拔最高的通航大湖</h3>
 <p>的的喀喀湖橫跨秘魯與玻利維亞邊境，湖面遼闊、陽光清澈，走訪<strong>蘆葦浮島</strong>與<strong>塔吉利島</strong>，感受烏魯人與島民延續至今的生活與工藝。</p>
@@ -320,11 +437,13 @@
 <h4 class="story-sub">彩虹山（七色山）</h4>
 <p>礦物與沉積岩層在陽光下呈現層層色彩，是近年備受矚目的高原健行景點；實際能否登頂與停留時間，依當日天候、海拔適應與團體安排為準。</p>
 </div>
+<figure class="fig fig-main"><img src="https://www.tcawg.com/data/images/202604/Peru/%E7%9A%84%E7%9A%84%E5%96%80%E5%96%80%E6%B9%96shutterstock_1204846594.jpg" alt="的的喀喀湖" width="1200" height="800" decoding="async" loading="lazy"><figcaption class="cap-v">Lago Titicaca · 的的喀喀湖</figcaption></figure>
+<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/0410.jpg" alt="彩虹山（七色山）" width="1200" height="800" decoding="async" loading="lazy"><figcaption class="cap">Vinicunca · 彩虹山</figcaption></figure>
 </div>
 </section>
 <section class="story is-d" id="pe55-anchor-6" aria-labelledby="pe55-g4-h">
 <div class="panel-hero reveal-block">
-<div class="panel-hero-media"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_3117528.jpg" alt="祕魯文化與風景意象" decoding="async" loading="lazy"></div>
+<div class="panel-hero-media"><img src="https://www.tcawg.com/data/images/202604/Peru/LIM12B-%E7%BE%8E%E9%A3%9F2(1).jpg" alt="祕魯文化與風景意象" decoding="async" loading="lazy"></div>
 <div class="panel-scrim" aria-hidden="true"></div>
 <header class="chapter serif">
 <span class="chapter-no" aria-hidden="true">Ⅳ</span>
@@ -341,17 +460,23 @@
 <p>走進利馬，從市場到餐桌，認識融合安地斯、太平洋與殖民歷史的飲食脈絡；每一道料理都像在說一段城市故事。</p>
 <h4 class="story-sub">城市散策與在地氛圍</h4>
 <p>沿著米拉弗洛雷斯與老城區街道漫步，感受海岸線、廣場與歷史建築交織出的節奏，為旅程留下更完整的祕魯印象。</p>
+<div class="story-divider" aria-hidden="true"></div>
+<h4 class="story-sub">庫斯科餐廳</h4>
+<p>位於庫斯科的祕魯風味餐廳擁有獨特而溫馨的氛圍和用餐環境，專注於創意祕魯美食。</p>
+<p>這裡巧妙地將傳統祕魯菜餚與現代烹飪技術相融合，精心烹製出一道道獨一無二的精緻佳餚。</p>
 </div>
-<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_1299479194.jpg" alt="城市文化景觀" decoding="async" loading="lazy"><figcaption class="cap">城市街景</figcaption></figure>
-<div class="story-film two">
-<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_2758139121.jpg" alt="祕魯在地風情" decoding="async" loading="lazy"><figcaption class="cap">在地風情</figcaption></figure>
-<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/1_ks5uF1PRVmRRslWTUb9r_w.jpg" alt="祕魯旅行場景" decoding="async" loading="lazy"><figcaption class="cap">旅行場景</figcaption></figure>
+<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/caption.jpg" alt="利馬文化場景" decoding="async" loading="lazy"><figcaption class="cap">利馬文化</figcaption></figure>
+<div class="story-inca-band" aria-hidden="true"></div>
+<div class="story-film">
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/655.jpg" alt="祕魯美食特寫" decoding="async" loading="lazy"><figcaption class="cap">美食特寫</figcaption></figure>
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/chactado.jpg" alt="祕魯炸天竺鼠料理" decoding="async" loading="lazy"><figcaption class="cap">Chactado</figcaption></figure>
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/ceviche-plate.jpeg" alt="祕魯酸醃生魚 Ceviche" decoding="async" loading="lazy"><figcaption class="cap">Ceviche</figcaption></figure>
 </div>
 </div>
 </section>
 <section class="story is-e" id="pe55-anchor-7" aria-labelledby="pe55-g5-h">
 <div class="panel-hero reveal-block">
-<div class="panel-hero-media"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_1299479194.jpg" alt="祕魯當地優質住宿" decoding="async" loading="lazy"></div>
+<div class="panel-hero-media"><img src="https://www.tcawg.com/data/images/202604/Peru/113415328.jpg" alt="祕魯當地優質住宿" decoding="async" loading="lazy"><img src="https://www.tcawg.com/data/images/202604/Peru/4a28.jpg" alt="旅宿公共空間" decoding="async" loading="lazy"></div>
 <div class="panel-scrim" aria-hidden="true"></div>
 <header class="chapter serif">
 <span class="chapter-no" aria-hidden="true">Ⅴ</span>
@@ -362,17 +487,22 @@
 </header>
 </div>
 <div class="story-grid">
-<figure class="fig fig-main"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_1299479194.jpg" alt="祕魯住宿體驗" decoding="async" loading="lazy"><figcaption class="cap-v">Selected Stays · 優質住宿</figcaption></figure>
 <div class="story-text">
+<h4 class="story-sub">馬丘比丘最佳住宿位置</h4>
+<p>嚴選當地優質住宿，市場唯一安排前一晚入住熱水鎮，距離馬丘比丘最近，旅遊最省時。</p>
+<div class="story-divider" aria-hidden="true"></div>
 <h3 class="story-sub">舒適與風格兼具的旅宿安排</h3>
 <p>精選交通便利且口碑穩定的當地飯店，從公共空間到客房細節都兼顧舒適與安全，讓每天行程結束後都能好好休息。</p>
+<div class="story-divider" aria-hidden="true"></div>
 <h4 class="story-sub">兼顧景觀、位置與服務</h4>
 <p>依不同城市特色安排住宿，兼顧景觀視野、生活機能與服務品質，讓旅程不只好玩，也住得安心、住得有質感。</p>
 </div>
-<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_3117528.jpg" alt="旅宿公共空間" decoding="async" loading="lazy"><figcaption class="cap">旅宿公共空間</figcaption></figure>
-<div class="story-film two">
-<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_2758139121.jpg" alt="客房設施與環境" decoding="async" loading="lazy"><figcaption class="cap">客房與設施</figcaption></figure>
-<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/1_ks5uF1PRVmRRslWTUb9r_w.jpg" alt="在地住宿風格" decoding="async" loading="lazy"><figcaption class="cap">在地住宿風格</figcaption></figure>
+<figure class="fig fig-main"><img src="https://www.tcawg.com/data/images/202604/Peru/113594774.jpg" alt="祕魯住宿體驗" decoding="async" loading="lazy"><figcaption class="cap-v">Selected Stays · 優質住宿</figcaption></figure>
+<figure class="fig fig-side"><img src="https://www.tcawg.com/data/images/202604/Peru/113594783.jpg" alt="旅宿公共空間" decoding="async" loading="lazy"><figcaption class="cap">旅宿公共空間</figcaption></figure>
+<div class="story-film">
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/427172487.jpg" alt="客房設施與環境" decoding="async" loading="lazy"><figcaption class="cap">客房與設施</figcaption></figure>
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/KING-MARRON-2.jpg" alt="在地住宿風格" decoding="async" loading="lazy"><figcaption class="cap">在地住宿風格</figcaption></figure>
+<figure class="fig small"><img src="https://www.tcawg.com/data/images/202604/Peru/427172463.jpg" alt="在地住宿空間" decoding="async" loading="lazy"><figcaption class="cap">在地住宿空間</figcaption></figure>
 </div>
 </div>
 </section>

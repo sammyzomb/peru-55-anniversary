@@ -1,0 +1,199 @@
+<div id="pe55-cms-safe-root"><style type="text/css">
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@600;700&family=Noto+Sans+TC:wght@300;400;500;600;700;900&family=Noto+Serif+TC:ital,wght@0,400;0,600;1,400&display=swap");
+#pe55-cms-safe-root{position:relative;isolation:isolate;width:auto;max-width:none;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);box-sizing:border-box;overflow-x:hidden}
+#pe55-root,#pe55-root *{box-sizing:border-box}
+#pe55-root{--g:#b8942a;--bg:#efeae3;--tx:#2a2622;--tx2:#575045;--r:clamp(10px,1.1vw,15px);--gap:clamp(14px,1.5vw,20px);--pad:clamp(1rem,4vw,3.5rem);--shadow:0 8px 28px rgba(0,0,0,.25);width:100%;margin:0;padding:0;color:var(--tx);font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:linear-gradient(178deg,#faf9f6 0,#f4f1eb 38%,#ebe6df 72%,#e3ded6 100%)}
+#pe55-root .serif{font-family:"Noto Serif TC",Georgia,serif}
+#pe55-root img{display:block;max-width:100%}
+#pe55-root figure,#pe55-root p,#pe55-root h2,#pe55-root h3,#pe55-root h4,#pe55-root ol,#pe55-root blockquote{margin:0}
+#pe55-root [id^="pe55-anchor-"]{scroll-margin-top:clamp(.5rem,2vh,1.25rem)}
+#pe55-root .shell{padding:clamp(1.75rem,3.2vw,2.75rem) 0 0}
+#pe55-root .band{padding:0 clamp(1.4rem,5.2vw,4rem)}
+#pe55-root .highlights{position:relative;z-index:2;background:#ebe6df;overflow:visible}
+#pe55-root .highlights-card{padding:clamp(.85rem,1.8vw,1.35rem) var(--pad) clamp(1.95rem,3.6vw,2.8rem);background:#faf7f2;overflow:visible}
+#pe55-root .highlights-grid{display:grid;gap:clamp(1.2rem,2.8vw,1.75rem) clamp(1.15rem,2.8vw,2rem);grid-template-areas:"hd" "viz" "txt"}
+#pe55-root .highlights-title{grid-area:hd;display:flex;flex-direction:column;gap:.08em;line-height:1.12;text-align:center;align-items:center;opacity:0;transform:translate3d(clamp(2.2rem,7vw,4.4rem),0,0)}
+#pe55-root .highlights.is-in .highlights-title{animation:pe55-right-in 1.05s cubic-bezier(.2,.72,.2,1) .08s forwards}
+#pe55-root .highlights-title b{font-size:clamp(2.15rem,5vw,3.35rem);font-weight:900;letter-spacing:.055em;color:var(--g);text-shadow:0 1px 0 rgba(255,255,255,.5)}
+#pe55-root .highlights-title span{font:700 clamp(1.15rem,2.55vw,1.62rem)/1.22 Caveat,cursive;color:rgba(90,76,58,.92);transform:rotate(-.35deg)}
+#pe55-root .mosaic{grid-area:viz;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(6px,1.1vw,10px);padding:.15rem;height:auto;align-items:start}
+#pe55-root .mosaic .hl-cell{position:relative;border-radius:clamp(6px,.85vw,10px);overflow:hidden;background:#ddd8cf;width:100%;height:auto;aspect-ratio:16/9}
+#pe55-root .mosaic .hl-cell>p:only-child{display:block;margin:0!important;padding:0!important;width:100%!important;height:auto!important}
+#pe55-root .mosaic .hl-cell img{display:block;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;object-fit:cover!important;object-position:50% 50%;opacity:0;animation:pe55-fadeup .78s cubic-bezier(.22,.61,.16,1) .12s forwards;position:absolute!important;inset:0!important}
+#pe55-root .hl-list{grid-area:txt;list-style:none;padding:0;margin:0;counter-reset:pe55hl;overflow:visible}
+#pe55-root .hl-list .hl-item{position:relative;padding:clamp(.28rem,.6vw,.42rem) 0 clamp(.28rem,.6vw,.42rem) clamp(2.85rem,5vw,3.45rem);counter-increment:pe55hl}
+#pe55-root .hl-list .hl-item:first-child{padding-top:0}
+#pe55-root .hl-list .hl-item:last-child{padding-bottom:clamp(.55rem,1.3vw,.95rem)}
+#pe55-root .hl-list .hl-h{margin:0 0 .48rem;font-size:clamp(1.22rem,2.05vw,1.52rem);font-weight:600;letter-spacing:.035em;line-height:1.5;color:var(--tx)}
+#pe55-root .hl-list .hl-sub{margin:0;font-size:clamp(1.04rem,1.55vw,1.22rem);line-height:1.95;color:var(--tx2);letter-spacing:.02em}
+#pe55-root .hl-list .hl-sub+.hl-sub{margin-top:.45rem}
+#pe55-root .hl-list .hl-totem{position:relative;z-index:3;margin:clamp(.5rem,1.2vw,.85rem) clamp(-.9rem,-2.2vw,-.25rem) clamp(-.35rem,-.9vw,-.2rem) 0;display:flex;justify-content:center;pointer-events:none}
+#pe55-root .hl-list .hl-totem img{display:block;width:clamp(220px,28vw,380px);height:auto;opacity:.14;animation:pe55-spin 220s linear infinite}
+
+/* ===== 亮點清單高端精品風格改進 ===== */
+#pe55-root .hl-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(320px,28vw,380px),1fr));gap:clamp(2rem,3vw,2.5rem);margin-top:clamp(2rem,4vw,3rem)}
+#pe55-root .hl-card{position:relative;background:linear-gradient(145deg,#ffffff 0%,#fafafa 50%,#f5f5f5 100%);border-radius:clamp(16px,2vw,24px);box-shadow:0 8px 32px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.04),inset 0 1px 0 rgba(255,255,255,.8);overflow:hidden;border:1px solid rgba(184,148,42,.15);transition:all .4s cubic-bezier(.25,.46,.45,.94);backdrop-filter:blur(10px)}
+#pe55-root .hl-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(0,0,0,.12),0 12px 32px rgba(0,0,0,.08),inset 0 1px 0 rgba(255,255,255,.9);border-color:rgba(184,148,42,.25)}
+#pe55-root .hl-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(184,148,42,.03) 0%,rgba(184,148,42,.08) 50%,rgba(184,148,42,.03) 100%);pointer-events:none;opacity:0;transition:opacity .4s ease}
+#pe55-root .hl-card:hover::before{opacity:1}
+#pe55-root .hl-card::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;border:1px solid rgba(184,148,42,.1);border-radius:inherit;pointer-events:none}
+
+/* 高端質感裝飾元素 */
+#pe55-root .hl-card-decoration{position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#b8942a 0%,#d4af37 30%,#f4e87c 50%,#d4af37 70%,#b8942a 100%);border-radius:16px 16px 0 0}
+#pe55-root .hl-card-glow{position:absolute;inset:-2px;background:linear-gradient(45deg,#b8942a,#d4af37,#f4e87c,#d4af37,#b8942a);border-radius:inherit;opacity:0;filter:blur(8px);transition:opacity .4s ease;z-index:-1}
+#pe55-root .hl-card:hover .hl-card-glow{opacity:.3}
+
+#pe55-root .hl-card-icon{position:absolute;top:clamp(1.2rem,2vw,1.5rem);right:clamp(1.2rem,2vw,1.5rem);width:clamp(48px,5vw,60px);height:clamp(48px,5vw,60px);background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 50%,#1a1a1a 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d4af37;font-size:clamp(1.4rem,2.5vw,1.8rem);box-shadow:inset 0 2px 4px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.2);border:2px solid #d4af37;z-index:3}
+#pe55-root .hl-card-content{padding:clamp(2.5rem,4vw,3.5rem) clamp(2rem,3vw,2.5rem) clamp(2rem,3vw,2.5rem);position:relative;z-index:2}
+#pe55-root .hl-card-number{position:absolute;top:clamp(.8rem,1.5vw,1rem);left:clamp(1.2rem,2vw,1.5rem);font:300 clamp(3.5rem,6vw,5rem)/1 'Times New Roman',serif;color:rgba(184,148,42,.08);z-index:1;letter-spacing:-.02em;text-shadow:0 2px 4px rgba(184,148,42,.1)}
+#pe55-root .hl-card-title{margin:0 0 .8rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:600;letter-spacing:.02em;line-height:1.2;color:#1a1a1a;text-transform:uppercase}
+#pe55-root .hl-card-desc{margin:0;font-family:'Noto Serif TC',serif;font-size:clamp(1rem,1.4vw,1.1rem);line-height:1.7;color:#4a4a4a;font-style:italic}
+#pe55-root .hl-card-desc+.hl-card-desc{margin-top:.6rem}
+
+/* 高端精品風格的特殊效果 */
+#pe55-root .hl-card-premium{position:relative}
+#pe55-root .hl-card-premium::before{content:'PREMIUM';position:absolute;top:clamp(.6rem,1vw,.8rem);right:clamp(1.2rem,2vw,1.5rem);font:700 clamp(.7rem,1vw,.8rem)/1 'Arial',sans-serif;color:#d4af37;text-transform:uppercase;letter-spacing:.1em;background:#1a1a1a;padding:.2rem .6rem;border-radius:10px;z-index:4}
+
+/* 響應式調整 - 精品風格 */
+@media (max-width:779px){
+#pe55-root .hl-cards{grid-template-columns:1fr;gap:clamp(1.5rem,2.5vw,2rem);margin-top:clamp(1.5rem,3vw,2rem)}
+#pe55-root .hl-card{max-width:100%;margin:0 auto;border-radius:clamp(12px,1.5vw,16px)}
+#pe55-root .hl-card-content{padding:clamp(2rem,3vw,2.5rem) clamp(1.5rem,2.5vw,2rem)}
+#pe55-root .hl-card-number{font-size:clamp(2.8rem,5vw,3.8rem)}
+#pe55-root .hl-card-icon{width:clamp(40px,4vw,48px);height:clamp(40px,4vw,48px);font-size:clamp(1.2rem,2vw,1.4rem)}
+}
+
+/* 響應式調整 */
+@media (max-width:779px){
+#pe55-root .highlights-grid{grid-template-columns:minmax(0,38fr) minmax(0,62fr);grid-template-rows:auto 1fr;grid-template-areas:"hd viz" "txt viz";align-items:stretch}
+#pe55-root .highlights-title{align-items:flex-start;text-align:left;padding-right:clamp(.35rem,1.6vw,1.05rem)}
+#pe55-root .hl-list{padding-right:clamp(.35rem,1.6vw,1.05rem);padding-left:0}
+#pe55-root .hl-cards{grid-template-columns:1fr;gap:clamp(.8rem,1.5vw,1rem)}
+#pe55-root .hl-card{max-width:100%;margin:0 auto}
+}
+@media (min-width:780px){
+#pe55-root .highlights-grid{grid-template-columns:minmax(0,38fr) minmax(0,62fr);grid-template-rows:auto 1fr;grid-template-areas:"hd viz" "txt viz";align-items:stretch}
+#pe55-root .highlights-title{align-items:flex-start;text-align:left;padding-right:clamp(.35rem,1.6vw,1.05rem)}
+#pe55-root .hl-list{padding-right:clamp(.35rem,1.6vw,1.05rem);padding-left:0}
+}
+
+/* 動畫 */
+#pe55-root:not(.is-ready) .reveal-title,#pe55-root:not(.is-ready) .reveal-up,#pe55-root:not(.is-ready) .highlights-title{opacity:1!important;transform:none!important;filter:none!important}
+#pe55-root:not(.is-ready) .hero-sub-stack{display:flex;flex-direction:column;gap:.32em;height:auto;overflow:visible;perspective:none}
+#pe55-root:not(.is-ready) .hero-sub-line{position:static;white-space:normal;text-overflow:clip}
+@media (prefers-reduced-motion:reduce){#pe55-root *,#pe55-root *::before,#pe55-root *::after{animation:none!important;transition:none!important}#pe55-root .reveal-title,#pe55-root .reveal-up,#pe55-root .highlights-title{opacity:1!important;transform:none!important}#pe55-root .hero-sub-stack{display:flex;flex-direction:column;gap:.32em;height:auto;overflow:visible;perspective:none}#pe55-root .hero-sub-line{position:static;white-space:normal;text-overflow:clip}}
+@keyframes pe55-right-in{0%{opacity:0;transform:translate3d(clamp(2.2rem,7vw,4.4rem),0,0)}100%{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes pe55-spin{to{transform:rotate(360deg)}}
+@keyframes pe55-fadeup{from{opacity:0;transform:translateY(22%)}to{opacity:1;transform:none}}
+</style>
+
+<div id="pe55-root" lang="zh-Hant">
+<section class="highlights serif reveal-block" id="pe55-anchor-2" aria-labelledby="pe55-highlights-h">
+<div class="highlights-card">
+<div class="highlights-grid">
+<div class="mosaic" aria-hidden="true">
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_3117528.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_1299479194.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/shutterstock_2758139121.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/%E7%9A%84%E7%9A%84%E5%96%80%E5%96%80%E6%B9%96shutterstock_1204846594.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/4220217.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+<div class="hl-cell"><img src="https://www.tcawg.com/data/images/202604/Peru/1_ks5uF1PRVmRRslWTUb9r_w.jpg" alt="" width="1200" height="800" decoding="async" loading="lazy"></div>
+</div>
+<h2 id="pe55-highlights-h" class="highlights-title"><b>精采豐富行程設計</b><span lang="es">Un itinerario enriquecedor y completo</span></h2>
+
+<!-- 新的高端精品風格亮點清單 -->
+<div class="hl-cards">
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">✈️</div>
+<div class="hl-card-number">1</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">尊榮航空體驗</h3>
+<p class="hl-card-desc">專屬長榮航空頭等艙服務，尊榮抵達入住利馬六星級飯店。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🏛️</div>
+<div class="hl-card-number">2</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">頂級住宿尊寵</h3>
+<p class="hl-card-desc">入住熱水鎮私人莊園，獨享馬丘比丘日出晨曦。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🌟</div>
+<div class="hl-card-number">3</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">傳奇雙島之旅</h3>
+<p class="hl-card-desc">的的喀喀湖雙島：烏魯族長蘆葦浮島、印加塔吉利島，世界遺產私密探索。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">👨‍🍳</div>
+<div class="hl-card-number">4</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">米其林星級美食</h3>
+<p class="hl-card-desc">秘魯傳統貴族料理：阿雅庫喬天竺鼠、皮烏拉港生魚，米其林主廚親炙。</p>
+</div>
+</div>
+
+<div class="hl-card hl-card-premium">
+<div class="hl-card-decoration"></div>
+<div class="hl-card-glow"></div>
+<div class="hl-card-icon">🛩️</div>
+<div class="hl-card-number">5</div>
+<div class="hl-card-content">
+<h3 class="hl-card-title">私人專機服務</h3>
+<p class="hl-card-desc">南美洲最佳航空公司專機，連續六年獲獎，頂級機上管家服務。</p>
+<p class="hl-card-desc">享受全球最奢華的飛行體驗，讓旅程從起飛那一刻開始尊榮。</p>
+</div>
+</div>
+</div>
+
+<!-- 保留原有的清單作為備用 -->
+<ol class="hl-list" style="display:none;">
+<li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+<li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+<li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+<li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+<li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p><div class="hl-totem" aria-hidden="true"><img src="https://www.tcawg.com/data/images/202604/Peru/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202026-04-16%20153205.png" alt="" width="640" height="640" decoding="async" loading="lazy"></div></li>
+</ol>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+(function(){
+var root=document.getElementById("pe55-root");
+if(!root)return;
+root.classList.add("is-ready");
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var ioSupported="IntersectionObserver"in window;
+function activate(el,once){
+if(!el)return;
+if(reduce||!ioSupported){el.classList.add("is-in");return;}
+var io=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){
+if(entry.isIntersecting){el.classList.add("is-in");if(once)io.disconnect();}
+else if(!once){el.classList.remove("is-in");}
+});
+},{threshold:.18,rootMargin:"0px 0px -8% 0px"});
+io.observe(el);
+}
+activate(root.querySelector(".hero"),true);
+Array.prototype.forEach.call(root.querySelectorAll(".reveal-block"),function(el){activate(el,false);});
+})();
+</script>
+</div></content>
+<parameter name="filePath">c:\Users\user\Documents\祕魯55周年\亮點清單測試版.html
