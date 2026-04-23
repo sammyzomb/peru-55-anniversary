@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>精采豐富行程設計｜分隔線樣式預覽</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Noto+Serif+TC:wght@400;600&family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf7f2;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#2a2622;padding:2.5rem 1.5rem}
+h1{font-family:"Noto Serif TC",serif;font-size:1.1rem;font-weight:600;letter-spacing:.15em;color:#5c5348;margin-bottom:.35rem}
+.page-desc{font-size:.82rem;color:#888;letter-spacing:.04em;margin-bottom:2.5rem}
+
+/* ── 共用版面 ── */
+.preview-block{background:#fff;border-radius:14px;padding:2rem 1.75rem 1.5rem;margin-bottom:2.25rem;box-shadow:0 2px 18px rgba(32,28,24,.07)}
+.preview-label{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.18em;color:#fff;background:#b8942a;border-radius:4px;padding:.18em .7em .2em;margin-bottom:1.35rem}
+.preview-desc{font-size:.8rem;color:#888;letter-spacing:.04em;margin-top:-.7rem;margin-bottom:1.35rem}
+
+ol.hl-list{list-style:none;counter-reset:hl}
+.hl-item{counter-increment:hl;position:relative;padding:0 0 .15rem 2.8rem;margin-bottom:1.35rem}
+.hl-item:last-child{margin-bottom:0}
+.hl-item::before{content:counter(hl)".";position:absolute;left:0;top:.02em;font-family:"Caveat",cursive;font-weight:700;font-size:1.95rem;line-height:1;color:rgba(184,148,42,.92)}
+.hl-h{font-size:1.08rem;font-weight:700;letter-spacing:.03em;line-height:1.5;color:#2a2622;margin-bottom:.3rem}
+.hl-sub{font-size:.92rem;line-height:1.85;color:#575045;letter-spacing:.02em}
+.hl-sub strong{font-weight:700;color:#b8942a}
+
+/* ── 樣式 A：黃金漸層線 ── */
+.style-a .hl-item{padding-bottom:.85rem}
+.style-a .hl-item:not(:last-child)::after{
+  content:"";display:block;margin-top:.85rem;
+  height:1px;
+  background:linear-gradient(to right,rgba(184,148,42,.7) 0%,rgba(184,148,42,.28) 40%,rgba(184,148,42,0) 82%);
+}
+
+/* ── 樣式 B：左金點 + 細線 ── */
+.style-b .hl-item{padding-bottom:.85rem}
+.style-b .hl-item:not(:last-child)::after{
+  content:"";display:block;margin-top:.85rem;
+  height:1px;
+  background:
+    radial-gradient(circle at 0% 50%, rgba(184,148,42,.9) 0%, rgba(184,148,42,.9) 2px, transparent 2px),
+    linear-gradient(to right,rgba(184,148,42,.45) 0%,rgba(184,148,42,.12) 55%,rgba(184,148,42,0) 90%);
+}
+
+/* ── 樣式 C：雙層細線（古卷風） ── */
+.style-c .hl-item{padding-bottom:.85rem}
+.style-c .hl-item:not(:last-child)::after{
+  content:"";display:block;margin-top:.85rem;
+  height:3px;
+  background:
+    linear-gradient(to bottom,
+      rgba(184,148,42,.42) 0%, rgba(184,148,42,.42) 1px,
+      transparent 1px, transparent 2px,
+      rgba(184,148,42,.14) 2px, rgba(184,148,42,.14) 3px
+    );
+}
+
+/* ── 樣式 D：虛線（古地圖感） ── */
+.style-d .hl-item{padding-bottom:.85rem}
+.style-d .hl-item:not(:last-child)::after{
+  content:"";display:block;margin-top:.85rem;
+  height:0;
+  border-bottom:1.5px dashed rgba(184,148,42,.45);
+}
+
+/* ── 樣式 E：印加幾何 — 中心菱形 ── */
+.style-e .hl-item{padding-bottom:.85rem}
+.style-e .hl-item:not(:last-child)::after{
+  content:"◆";display:block;margin-top:.7rem;
+  text-align:left;padding-left:0;
+  font-size:.45rem;letter-spacing:.28em;color:rgba(184,148,42,.55);
+  line-height:1;
+  /* 左邊一顆菱形＋細線延伸 */
+  background:linear-gradient(to right,transparent 1rem,rgba(184,148,42,.25) 1rem,rgba(184,148,42,.25) calc(100% - 0px),transparent 100%);
+  background-size:100% 1px;
+  background-repeat:no-repeat;
+  background-position:center;
+  padding-top:.25rem;
+}
+
+/* ── 版本比較標題 ── */
+.compare-badge{display:flex;gap:.65rem;align-items:center;margin-bottom:.9rem}
+.compare-badge .letter{font-family:"Caveat",cursive;font-size:2.2rem;font-weight:700;color:rgba(184,148,42,.85);line-height:1}
+.compare-badge .name{font-size:.78rem;font-weight:700;letter-spacing:.1em;color:#5c5348}
+.compare-badge .tag{font-size:.68rem;background:rgba(184,148,42,.12);color:#8a6a18;border-radius:3px;padding:.1em .5em;letter-spacing:.06em;border:1px solid rgba(184,148,42,.2)}
+</style>
+</head>
+<body>
+
+<h1>精采豐富行程設計｜分隔線樣式預覽</h1>
+<p class="page-desc">共 5 種樣式，選好後告訴 AI 要用哪一款</p>
+
+<!-- ── A ── -->
+<div class="preview-block">
+<div class="compare-badge">
+  <span class="letter">A</span>
+  <div><div class="name">黃金漸層線</div><span class="tag">推薦 · 與金色調一致</span></div>
+</div>
+<p class="preview-desc">由左側金色逐漸消淡，有書法收筆感，最搭羊皮地圖主題</p>
+<ol class="hl-list style-a">
+  <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+  <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+  <li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+  <li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+  <li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p></li>
+</ol>
+</div>
+
+<!-- ── B ── -->
+<div class="preview-block">
+<div class="compare-badge">
+  <span class="letter">B</span>
+  <div><div class="name">左端金點 + 細線</div><span class="tag">時間軸感</span></div>
+</div>
+<p class="preview-desc">左側一個金色圓點錨定視線，細線向右淡出，有時間軸或地圖圖例的感覺</p>
+<ol class="hl-list style-b">
+  <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+  <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+  <li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+  <li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+  <li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p></li>
+</ol>
+</div>
+
+<!-- ── C ── -->
+<div class="preview-block">
+<div class="compare-badge">
+  <span class="letter">C</span>
+  <div><div class="name">雙層細線</div><span class="tag">古典印刷感</span></div>
+</div>
+<p class="preview-desc">上粗下細兩條線，仿古籍版面或殖民時期印刷體，與利馬老城風格呼應</p>
+<ol class="hl-list style-c">
+  <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+  <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+  <li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+  <li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+  <li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p></li>
+</ol>
+</div>
+
+<!-- ── D ── -->
+<div class="preview-block">
+<div class="compare-badge">
+  <span class="letter">D</span>
+  <div><div class="name">虛線</div><span class="tag">古地圖感</span></div>
+</div>
+<p class="preview-desc">間隔虛線搭配淡金色，像古地圖標記路線，呼應納斯卡線、探險路線意象</p>
+<ol class="hl-list style-d">
+  <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+  <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+  <li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+  <li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+  <li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p></li>
+</ol>
+</div>
+
+<!-- ── E ── -->
+<div class="preview-block">
+<div class="compare-badge">
+  <span class="letter">E</span>
+  <div><div class="name">菱形 + 細線</div><span class="tag">印加幾何感</span></div>
+</div>
+<p class="preview-desc">左端金色菱形符號搭配細線，帶入印加幾何織品紋樣，裝飾性更強</p>
+<ol class="hl-list style-e">
+  <li class="hl-item"><p class="hl-h">旅遊時間最多</p><p class="hl-sub">安排長榮航空，<strong>抵達入住</strong>利馬五星飯店。</p></li>
+  <li class="hl-item"><p class="hl-h">體驗精選飯店</p><p class="hl-sub">入住熱水鎮一晚，<strong>馬丘比丘遊玩時間最長</strong>！</p></li>
+  <li class="hl-item"><p class="hl-h">航向世界特別安排</p><p class="hl-sub"><strong>的的喀喀湖雙島</strong>：蘆葦浮島、塔吉利島、納斯卡線飛行之旅</p></li>
+  <li class="hl-item"><p class="hl-h">推薦經典特色美食</p><p class="hl-sub">品嘗祕魯傳統特色美食：檸檬醃生魚、天竺鼠料理</p></li>
+  <li class="hl-item"><p class="hl-h">搭乘連續六年榮獲南美洲最佳航空公司的南美航空</p><p class="hl-sub">連續第四年榮獲南美最佳航空公司員工</p><p class="hl-sub">享受最頂級的機上設備讓飛行成為最難忘的回憶</p></li>
+</ol>
+</div>
+
+<p style="font-size:.75rem;color:#aaa;text-align:center;margin-top:1rem;letter-spacing:.06em">選好後告訴 AI「用 A」或「用 D」即可套入正式檔案</p>
+</body>
+</html>
